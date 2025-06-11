@@ -39,7 +39,7 @@ namespace GestionDeStock.Formularios
                     var nuevaCategoria = new Categoria
                     {
                         Nombre = textBoxNuevaCategoria.Text,
-                        CategoriaId = categorias.Last().CategoriaId + 10
+                        CategoriaId = categorias.Count == 0 ? 10 :  categorias.Last().CategoriaId + 10
                     };
 
                     context.Categorias.Add(nuevaCategoria);
