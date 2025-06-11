@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Controles\ucIngreso.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Controles\ucInventario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Formularios\FormNuevaCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\FormNuevaSubcategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\FormPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\FormNuevoArtículo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
