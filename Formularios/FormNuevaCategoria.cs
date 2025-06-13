@@ -34,12 +34,15 @@ namespace GestionDeStock.Formularios
                     }
                 }
 
-                if (!existe)
+                if (string.IsNullOrWhiteSpace(textBoxNuevaCategoria.Text))
+                {
+                    MessageBox.Show("El campo \"Nombre de la nueva categoría\" esta incompleto.", "Campo incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                } else if (!existe)
                 {
                     var nuevaCategoria = new Categoria
                     {
                         Nombre = textBoxNuevaCategoria.Text,
-                        CategoriaId = categorias.Count == 0 ? 10 :  categorias.Last().CategoriaId + 10
+                        CategoriaId = categorias.Count == 0 ? 1 : categorias.Last().CategoriaId + 1
                     };
 
                     context.Categorias.Add(nuevaCategoria);

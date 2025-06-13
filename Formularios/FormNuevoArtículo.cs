@@ -51,6 +51,7 @@ namespace GestionDeStock
                 comboBoxSubcategoria.DisplayMember = "Nombre";
                 comboBoxSubcategoria.ValueMember = "Id";
 
+                // método de actualización de subcategorías según la categoría seleccionada
                 comboBoxCategoria.SelectedIndexChanged += (s, e) =>
                 {
                     var categoriaId = (int)comboBoxCategoria.SelectedValue;
@@ -58,6 +59,7 @@ namespace GestionDeStock
                     var subcategoriasSeleccionadas = subcategorias
                         .Where(s => s.CategoriaId == categoriaId)
                         .ToList();
+
                     if (categoriaId == 0)
                     {
                         comboBoxSubcategoria.DataSource = placeholder;
@@ -69,7 +71,7 @@ namespace GestionDeStock
                         subcategoriasSeleccionadas.Insert(0, new Subcategoria
                         {
                             Id = 0,
-                            Nombre = "Selecciona una subcategoría"
+                            Nombre = "Seleccione una subcategoría"
                         });
 
                         comboBoxSubcategoria.DataSource = subcategoriasSeleccionadas;
@@ -81,7 +83,7 @@ namespace GestionDeStock
                 marcas.Insert(0, new Marca
                 {
                     Id = 0,
-                    Nombre = "Selecciona una marca"
+                    Nombre = "Seleccione una marca"
                 });
 
                 comboBoxMarca.DataSource = marcas;
@@ -91,13 +93,29 @@ namespace GestionDeStock
                 unidadesDeMedida.Insert(0, new UnidadMedida
                 {
                     Id = 0,
-                    Nombre = "Selecciona una unidad de medida"
+                    Nombre = "Seleccione una unidad de medida"
                 });
 
                 comboBoxUM.DataSource = unidadesDeMedida;
                 comboBoxUM.DisplayMember = "Nombre";
                 comboBoxUM.ValueMember = "Id";
 
+                // evento de apertura del formulario de creación de subcategoria
+                btnCrearSubcategoria.Click += (s, e) =>
+                {
+                    var popup = new FormNuevaSubcategoria();
+
+                    popup.ShowDialog();
+
+                    using (var context = new StockBDContext())
+                    {
+                        subcategorias = context.Subcategorias.ToList();
+                    }
+
+                    comboBoxCategoria.SelectedIndex = 0;
+                };
+
+                // evento de creación del artículo
                 btnAgregar.Click += (s, e) =>
                 {
                     if (string.IsNullOrWhiteSpace(textBoxDescription.Text))
@@ -124,12 +142,12 @@ namespace GestionDeStock
 
                             if (articulos.LastOrDefault() != null)
                             {
-                                codigoArticulo = articulos.Last().CodigoArticulo;
+                                codigoArticulo = articulos.Last().CodigoArticulo + 1;
                             }
 
                             var nuevoArticulo = new Articulo
                             {
-                                CodigoArticulo = codigoArticulo + 1,
+                                CodigoArticulo = codigoArticulo,
                                 CategoriaId = (int)comboBoxCategoria.SelectedValue,
                                 CodigoSubcategoria = subcategoriaSeleccionada.CodigoSubcategoria,
                                 SubcategoriaId = subcategoriaSeleccionada.Id,
@@ -172,6 +190,46 @@ namespace GestionDeStock
                 comboBoxCategoria.DataSource = categorias;
                 comboBoxCategoria.DisplayMember = "Nombre";
                 comboBoxCategoria.ValueMember = "CategoriaId";
+            }
+        }
+
+        private void btnCrearUM_Click(object sender, EventArgs e)
+        {
+            var popup = new FormNuevaUnidadDeMedida();
+            popup.ShowDialog();
+
+            using (var context = new StockBDContext())
+            {
+                var ums = context.UnidadesDeMedida.ToList();
+                ums.Insert(0, new UnidadMedida
+                {
+                    Id = 0,
+                    Nombre = "Seleccione una unidad de medida"
+                });
+
+                comboBoxUM.DataSource = ums;
+                comboBoxUM.DisplayMember = "Nombre";
+                comboBoxUM.ValueMember = "Id";
+            }
+        }
+
+        private void btnCrearMarca_Click(object sender, EventArgs e)
+        {
+            var popup = new FormNuevaMarca();
+            popup.ShowDialog();
+
+            using (var context = new StockBDContext())
+            {
+                var marcas = context.Marcas.ToList();
+                marcas.Insert(0, new Marca
+                {
+                    Id = 0,
+                    Nombre = "Seleccione una marca"
+                });
+
+                comboBoxMarca.DataSource = marcas;
+                comboBoxMarca.DisplayMember = "Nombre";
+                comboBoxMarca.ValueMember = "Id";
             }
         }
     }

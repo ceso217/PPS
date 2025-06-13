@@ -10,7 +10,13 @@
     <Compile Update="Formularios\FormNuevaCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Formularios\FormNuevaMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Formularios\FormNuevaSubcategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\FormNuevaUnidadDeMedida.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Formularios\FormPrincipal.cs">
