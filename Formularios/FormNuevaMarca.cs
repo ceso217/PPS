@@ -15,6 +15,7 @@ namespace GestionDeStock.Formularios
 {
     public partial class FormNuevaMarca : Form
     {
+        public Marca NuevaMarca { get; private set; }
         public FormNuevaMarca()
         {
             InitializeComponent();
@@ -50,16 +51,25 @@ namespace GestionDeStock.Formularios
                 }
                 else if (!existe)
                 {
-                    Marca nuevaMarca = new Marca()
+                    NuevaMarca = new Marca()
                     {
                         Nombre = textBox1.Text
                     };
 
-                    context.Marcas.Add(nuevaMarca);
+                    context.Marcas.Add(NuevaMarca);
                     context.SaveChanges();
-
+                    DialogResult = DialogResult.OK;
                     this.Close();
                 }
+            }
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                btnCrear.PerformClick();
+                e.Handled = true;
             }
         }
     }

@@ -191,40 +191,50 @@ namespace GestionDeStock
         private void btnCrearUM_Click(object sender, EventArgs e)
         {
             var popup = new FormNuevaUnidadDeMedida();
-            popup.ShowDialog();
+            var resultado = popup.ShowDialog();
 
-            using (var context = new StockBDContext())
+            if (resultado == DialogResult.OK)
             {
-                var ums = context.UnidadesDeMedida.ToList();
-                ums.Insert(0, new UnidadMedida
+                using (var context = new StockBDContext())
                 {
-                    Id = 0,
-                    Nombre = "Seleccione una unidad de medida"
-                });
+                    var ums = context.UnidadesDeMedida.ToList();
+                    ums.Insert(0, new UnidadMedida
+                    {
+                        Id = 0,
+                        Nombre = "Seleccione una unidad de medida"
+                    });
 
-                comboBoxUM.DataSource = ums;
-                comboBoxUM.DisplayMember = "Nombre";
-                comboBoxUM.ValueMember = "Id";
+                    comboBoxUM.DataSource = ums;
+                    comboBoxUM.DisplayMember = "Nombre";
+                    comboBoxUM.ValueMember = "Id";
+
+                    comboBoxUM.SelectedValue = popup.NuevaUM.Id;
+                }
             }
         }
 
         private void btnCrearMarca_Click(object sender, EventArgs e)
         {
             var popup = new FormNuevaMarca();
-            popup.ShowDialog();
+            var resultado = popup.ShowDialog();
 
-            using (var context = new StockBDContext())
+            if (resultado == DialogResult.OK)
             {
-                var marcas = context.Marcas.ToList();
-                marcas.Insert(0, new Marca
+                using (var context = new StockBDContext())
                 {
-                    Id = 0,
-                    Nombre = "Seleccione una marca"
-                });
+                    var marcas = context.Marcas.ToList();
+                    marcas.Insert(0, new Marca
+                    {
+                        Id = 0,
+                        Nombre = "Seleccione una marca"
+                    });
 
-                comboBoxMarca.DataSource = marcas;
-                comboBoxMarca.DisplayMember = "Nombre";
-                comboBoxMarca.ValueMember = "Id";
+                    comboBoxMarca.DataSource = marcas;
+                    comboBoxMarca.DisplayMember = "Nombre";
+                    comboBoxMarca.ValueMember = "Id";
+
+                    comboBoxMarca.SelectedValue = popup.NuevaMarca.Id;
+                }
             }
         }
 

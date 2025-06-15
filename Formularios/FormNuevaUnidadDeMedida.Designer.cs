@@ -39,9 +39,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            label1.Location = new Point(12, 26);
+            label1.Location = new Point(14, 35);
             label1.Name = "label1";
-            label1.Size = new Size(227, 25);
+            label1.Size = new Size(288, 32);
             label1.TabIndex = 0;
             label1.Text = "Nueva Unidad de Medida";
             // 
@@ -49,26 +49,29 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11.25F);
-            label2.Location = new Point(28, 99);
+            label2.Location = new Point(32, 132);
             label2.Name = "label2";
-            label2.Size = new Size(273, 20);
+            label2.Size = new Size(345, 25);
             label2.TabIndex = 1;
             label2.Text = "Nombre de la nueva unidad de medida:";
             // 
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 11.25F);
-            textBox1.Location = new Point(317, 96);
+            textBox1.Location = new Point(394, 129);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(153, 27);
+            textBox1.Size = new Size(174, 32);
             textBox1.TabIndex = 2;
+            textBox1.KeyDown += textBox1_KeyDown;
             // 
             // btnCancelar
             // 
             btnCancelar.Font = new Font("Segoe UI", 11.25F);
-            btnCancelar.Location = new Point(253, 165);
+            btnCancelar.Location = new Point(336, 218);
+            btnCancelar.Margin = new Padding(3, 4, 3, 4);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(98, 34);
+            btnCancelar.Size = new Size(112, 45);
             btnCancelar.TabIndex = 3;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
@@ -77,9 +80,10 @@
             // btnCrear
             // 
             btnCrear.Font = new Font("Segoe UI", 11.25F);
-            btnCrear.Location = new Point(125, 165);
+            btnCrear.Location = new Point(180, 218);
+            btnCrear.Margin = new Padding(3, 4, 3, 4);
             btnCrear.Name = "btnCrear";
-            btnCrear.Size = new Size(98, 34);
+            btnCrear.Size = new Size(112, 45);
             btnCrear.TabIndex = 4;
             btnCrear.Text = "Crear";
             btnCrear.UseVisualStyleBackColor = true;
@@ -87,15 +91,16 @@
             // 
             // FormNuevaUnidadDeMedida
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(489, 218);
+            ClientSize = new Size(625, 291);
             Controls.Add(btnCrear);
             Controls.Add(btnCancelar);
             Controls.Add(textBox1);
             Controls.Add(label2);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             Name = "FormNuevaUnidadDeMedida";
             ShowIcon = false;

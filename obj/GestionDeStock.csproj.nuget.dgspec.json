@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Ceso\\PPS\\GestionDeStock\\GestionDeStock.csproj": {}
+    "C:\\Users\\baron\\Desktop\\PPS\\PPS\\GestionDeStock.csproj": {}
   },
   "projects": {
-    "D:\\Ceso\\PPS\\GestionDeStock\\GestionDeStock.csproj": {
+    "C:\\Users\\baron\\Desktop\\PPS\\PPS\\GestionDeStock.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Ceso\\PPS\\GestionDeStock\\GestionDeStock.csproj",
+        "projectUniqueName": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\GestionDeStock.csproj",
         "projectName": "GestionDeStock",
-        "projectPath": "D:\\Ceso\\PPS\\GestionDeStock\\GestionDeStock.csproj",
+        "projectPath": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\GestionDeStock.csproj",
         "packagesPath": "C:\\Users\\baron\\.nuget\\packages\\",
-        "outputPath": "D:\\Ceso\\PPS\\GestionDeStock\\obj\\",
+        "outputPath": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,8 +44,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -81,7 +80,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -40,18 +40,20 @@
             // panel
             // 
             panel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel.Location = new Point(147, 15);
+            panel.Location = new Point(168, 4);
+            panel.Margin = new Padding(3, 4, 3, 4);
             panel.Name = "panel";
-            panel.Size = new Size(1049, 553);
+            panel.Size = new Size(1199, 753);
             panel.TabIndex = 0;
             // 
             // btnInventario
             // 
             btnInventario.FlatStyle = FlatStyle.System;
             btnInventario.Font = new Font("Segoe UI", 11.25F);
-            btnInventario.Location = new Point(3, 3);
+            btnInventario.Location = new Point(3, 4);
+            btnInventario.Margin = new Padding(3, 4, 3, 4);
             btnInventario.Name = "btnInventario";
-            btnInventario.Size = new Size(123, 41);
+            btnInventario.Size = new Size(141, 55);
             btnInventario.TabIndex = 1;
             btnInventario.Text = "Inventario";
             btnInventario.UseVisualStyleBackColor = true;
@@ -64,18 +66,20 @@
             panel1.Controls.Add(button3);
             panel1.Controls.Add(btnIngreso);
             panel1.Controls.Add(btnInventario);
-            panel1.Location = new Point(12, 12);
+            panel1.Location = new Point(14, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(129, 556);
+            panel1.Size = new Size(147, 757);
             panel1.TabIndex = 1;
             // 
             // button4
             // 
             button4.FlatStyle = FlatStyle.System;
             button4.Font = new Font("Segoe UI", 11.25F);
-            button4.Location = new Point(3, 144);
+            button4.Location = new Point(3, 192);
+            button4.Margin = new Padding(3, 4, 3, 4);
             button4.Name = "button4";
-            button4.Size = new Size(123, 41);
+            button4.Size = new Size(141, 55);
             button4.TabIndex = 4;
             button4.Text = "button4";
             button4.UseVisualStyleBackColor = true;
@@ -84,9 +88,10 @@
             // 
             button3.FlatStyle = FlatStyle.System;
             button3.Font = new Font("Segoe UI", 11.25F);
-            button3.Location = new Point(3, 97);
+            button3.Location = new Point(3, 129);
+            button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
-            button3.Size = new Size(123, 41);
+            button3.Size = new Size(141, 55);
             button3.TabIndex = 3;
             button3.Text = "button3";
             button3.UseVisualStyleBackColor = true;
@@ -95,9 +100,10 @@
             // 
             btnIngreso.FlatStyle = FlatStyle.System;
             btnIngreso.Font = new Font("Segoe UI", 11.25F);
-            btnIngreso.Location = new Point(3, 50);
+            btnIngreso.Location = new Point(3, 67);
+            btnIngreso.Margin = new Padding(3, 4, 3, 4);
             btnIngreso.Name = "btnIngreso";
-            btnIngreso.Size = new Size(123, 41);
+            btnIngreso.Size = new Size(141, 55);
             btnIngreso.TabIndex = 2;
             btnIngreso.Text = "Ingreso";
             btnIngreso.UseVisualStyleBackColor = true;
@@ -105,11 +111,12 @@
             // 
             // FormPrincipal
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1208, 580);
+            ClientSize = new Size(1381, 773);
             Controls.Add(panel1);
             Controls.Add(panel);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FormPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Gestión de Stock";

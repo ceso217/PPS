@@ -39,9 +39,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            label1.Location = new Point(12, 26);
+            label1.Location = new Point(14, 35);
             label1.Name = "label1";
-            label1.Size = new Size(124, 25);
+            label1.Size = new Size(155, 32);
             label1.TabIndex = 0;
             label1.Text = "Nueva Marca";
             // 
@@ -49,26 +49,29 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11.25F);
-            label2.Location = new Point(23, 90);
+            label2.Location = new Point(26, 120);
             label2.Name = "label2";
-            label2.Size = new Size(192, 20);
+            label2.Size = new Size(244, 25);
             label2.TabIndex = 1;
             label2.Text = "Nombre de la nueva marca:";
             // 
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 11.25F);
-            textBox1.Location = new Point(234, 87);
+            textBox1.Location = new Point(267, 116);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(205, 27);
+            textBox1.Size = new Size(234, 32);
             textBox1.TabIndex = 2;
+            textBox1.KeyDown += textBox1_KeyDown;
             // 
             // btnCancelar
             // 
             btnCancelar.Font = new Font("Segoe UI", 11.25F);
-            btnCancelar.Location = new Point(250, 150);
+            btnCancelar.Location = new Point(286, 200);
+            btnCancelar.Margin = new Padding(3, 4, 3, 4);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(98, 34);
+            btnCancelar.Size = new Size(112, 45);
             btnCancelar.TabIndex = 3;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
@@ -77,9 +80,10 @@
             // btnCrear
             // 
             btnCrear.Font = new Font("Segoe UI", 11.25F);
-            btnCrear.Location = new Point(106, 150);
+            btnCrear.Location = new Point(121, 200);
+            btnCrear.Margin = new Padding(3, 4, 3, 4);
             btnCrear.Name = "btnCrear";
-            btnCrear.Size = new Size(98, 34);
+            btnCrear.Size = new Size(112, 45);
             btnCrear.TabIndex = 4;
             btnCrear.Text = "Crear";
             btnCrear.UseVisualStyleBackColor = true;
@@ -87,15 +91,16 @@
             // 
             // FormNuevaMarca
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(472, 212);
+            ClientSize = new Size(539, 283);
             Controls.Add(btnCrear);
             Controls.Add(btnCancelar);
             Controls.Add(textBox1);
             Controls.Add(label2);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             Name = "FormNuevaMarca";
             ShowIcon = false;

@@ -15,6 +15,7 @@ namespace GestionDeStock.Formularios
 {
     public partial class FormNuevaUnidadDeMedida : Form
     {
+        public UnidadMedida NuevaUM { get; private set; }
         public FormNuevaUnidadDeMedida()
         {
             InitializeComponent();
@@ -27,13 +28,15 @@ namespace GestionDeStock.Formularios
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            using (var context = new StockBDContext()) { 
+            using (var context = new StockBDContext())
+            {
 
                 var ums = context.UnidadesDeMedida.ToList();
 
                 bool existe = false;
 
-                foreach (UnidadMedida um in ums) {
+                foreach (UnidadMedida um in ums)
+                {
 
                     if (um.Nombre == textBox1.Text)
                     {
@@ -49,16 +52,25 @@ namespace GestionDeStock.Formularios
                 }
                 else if (!existe)
                 {
-                    UnidadMedida nuevaUM = new UnidadMedida()
+                    NuevaUM = new UnidadMedida()
                     {
                         Nombre = textBox1.Text
                     };
 
-                    context.UnidadesDeMedida.Add(nuevaUM);
+                    context.UnidadesDeMedida.Add(NuevaUM);
                     context.SaveChanges();
-
+                    DialogResult = DialogResult.OK;
                     this.Close();
                 }
+            }
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                btnCrear.PerformClick();
+                e.Handled = true;
             }
         }
     }
