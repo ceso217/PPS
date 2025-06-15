@@ -5,6 +5,7 @@ namespace GestionDeStock.Formularios
 {
     public partial class FormNuevaCategoria : Form
     {
+        public Categoria NuevaCategoria { get; private set; }
         public FormNuevaCategoria()
         {
             InitializeComponent();
@@ -37,19 +38,31 @@ namespace GestionDeStock.Formularios
                 if (string.IsNullOrWhiteSpace(textBoxNuevaCategoria.Text))
                 {
                     MessageBox.Show("El campo \"Nombre de la nueva categoría\" esta incompleto.", "Campo incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                } else if (!existe)
+                }
+                else if (!existe)
                 {
-                    var nuevaCategoria = new Categoria
+                    NuevaCategoria = new Categoria
                     {
                         Nombre = textBoxNuevaCategoria.Text,
                         CategoriaId = categorias.Count == 0 ? 1 : categorias.Last().CategoriaId + 1
                     };
 
-                    context.Categorias.Add(nuevaCategoria);
+                    context.Categorias.Add(NuevaCategoria);
                     context.SaveChanges();
 
+                    DialogResult = DialogResult.OK;
                     this.Close();
                 }
+            }
+        }
+
+        private void textBoxNuevaCategoria_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                btnCrearCategoria.PerformClick();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
             }
         }
     }

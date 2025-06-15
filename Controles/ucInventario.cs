@@ -1,5 +1,6 @@
 ﻿using GestionDeStock.DBContext;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,6 +36,14 @@ namespace GestionDeStock.Controles
             tabla.Columns.Add("UM");
             tabla.Columns.Add("Stock");
 
+            consultar("");
+
+            grilla.DataSource = tabla;
+        }
+
+        private void consultar(string filtro)
+        {
+            tabla.Clear();
 
             using (var context = new StockBDContext())
             {
@@ -48,12 +57,21 @@ namespace GestionDeStock.Controles
                     .ThenBy(a => a.CodigoArticulo)
                         .ToList();
 
-                foreach (var articulo in articulos)
+                // filtro de busqueda
+                var articulosFiltrados = string.IsNullOrEmpty(filtro) ? articulos : articulos
+                    .Where(a => a.Descripcion.ToLower().Contains(filtro.Trim().ToLower()) ||
+                    //a.Modelo.ToLower().Contains(filtro) ||
+                    //a.Marca?.Nombre.ToLower().Contains(filtro) == true ||
+                    a.Subcategoria?.Nombre.ToLower().Contains(filtro) == true ||
+                    a.Subcategoria?.Categoria?.Nombre.ToLower().Contains(filtro) == true ||
+                    a.CodigoArticulo.ToString().Contains(filtro));
+
+                foreach (var articulo in articulosFiltrados)
                 {
                     tabla.Rows.Add(
                         articulo.Subcategoria.Categoria.Nombre,
                         articulo.Subcategoria.Nombre,
-                        (articulo.CategoriaId + "" + articulo.CodigoSubcategoria + "" + articulo.CodigoArticulo),
+                        articulo.CodigoArticulo,
                         articulo.Descripcion,
                         articulo.MN,
                         articulo.Marca?.Nombre,
@@ -62,14 +80,57 @@ namespace GestionDeStock.Controles
                         articulo.Stock);
                 }
             }
-
-            grilla.DataSource = tabla;
         }
 
         private void btnAgregarArt_Click(object sender, EventArgs e)
         {
             var popup = new FormNuevoArtículo();
             popup.ShowDialog();
+            consultar("");
+        }
+
+        private void textBoxBusqueda_Enter(object sender, EventArgs e)
+        {
+            if (textBoxBusqueda.Text == "Buscar por código, descripción, etc.")
+            {
+                textBoxBusqueda.Text = "";
+                textBoxBusqueda.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBoxBusqueda_Leave(object sender, EventArgs e)
+        {
+            if (textBoxBusqueda.Text.IsNullOrEmpty())
+            {
+                textBoxBusqueda.Text = "Buscar por código, descripción, etc.";
+                textBoxBusqueda.ForeColor = Color.Gray;
+            }
+        }
+
+        private void textBoxBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            var filtroBusqueda = textBoxBusqueda.Text;
+
+            if (filtroBusqueda == "Buscar por código, descripción, etc.")
+            {
+                return;
+            }
+
+            consultar(filtroBusqueda);
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            ContextMenuStrip menu = new ContextMenuStrip();
+            menu.Font = new Font(menu.Font.FontFamily, 11);
+            menu.Items.Add("Categorías", null, (s, ev) => MessageBox.Show("Elegiste opción 1"));
+            menu.Items.Add("Subcategorías", null, (s, ev) => MessageBox.Show("Elegiste opción 2"));
+            menu.Items.Add("Artículos", null, (s, ev) => MessageBox.Show("Elegiste opción 2"));
+            menu.Items.Add("Marcas", null, (s, ev) => MessageBox.Show("Elegiste opción 2"));
+            menu.Items.Add("Unidades de medida", null, (s, ev) => MessageBox.Show("Elegiste opción 2"));
+
+
+            menu.Show(btnEditar, new Point(0, btnEditar.Height));
         }
     }
 }

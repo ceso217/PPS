@@ -319,7 +319,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(850, 546);
+            ClientSize = new Size(850, 554);
             Controls.Add(btnCrearUM);
             Controls.Add(btnCrearMarca);
             Controls.Add(btnCrearSubcategoria);

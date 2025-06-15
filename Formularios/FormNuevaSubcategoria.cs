@@ -15,9 +15,14 @@ namespace GestionDeStock.Formularios
 {
     public partial class FormNuevaSubcategoria : Form
     {
-        public FormNuevaSubcategoria()
+        public Subcategoria NuevaSubcategoria { get; private set; }
+        public Categoria CategoriaPerteneciente { get; private set; }
+        private int CategoriaSeleccionada { get; set; }
+
+        public FormNuevaSubcategoria(int categoriaId)
         {
             InitializeComponent();
+            CategoriaSeleccionada = categoriaId;
             Iniciar();
         }
 
@@ -36,6 +41,8 @@ namespace GestionDeStock.Formularios
                 comboBoxCategoria.DataSource = categorias;
                 comboBoxCategoria.DisplayMember = "Nombre";
                 comboBoxCategoria.ValueMember = "CategoriaId";
+
+                comboBoxCategoria.SelectedIndex = CategoriaSeleccionada;
             }
         }
 
@@ -53,9 +60,9 @@ namespace GestionDeStock.Formularios
             {
                 using (var context = new StockBDContext())
                 {
-                    var categoriaPerteneciente = comboBoxCategoria.SelectedItem as Categoria;
+                    CategoriaPerteneciente = comboBoxCategoria.SelectedItem as Categoria;
 
-                    var subcategorias = context.Subcategorias.Where(s => s.CategoriaId == categoriaPerteneciente.CategoriaId).ToList();
+                    var subcategorias = context.Subcategorias.Where(s => s.CategoriaId == CategoriaPerteneciente.CategoriaId).ToList();
 
                     bool existe = false;
 
@@ -71,15 +78,16 @@ namespace GestionDeStock.Formularios
 
                     if (!existe)
                     {
-                        var nuevaSubcategoria = new Subcategoria
+                        NuevaSubcategoria = new Subcategoria
                         {
-                            CategoriaId = categoriaPerteneciente.CategoriaId,
+                            CategoriaId = CategoriaPerteneciente.CategoriaId,
                             Nombre = textBoxNuevaSubcategoria.Text,
-                            CodigoSubcategoria = subcategorias.Count == 0 ? 1 : subcategorias.Last().CategoriaId + 1
+                            CodigoSubcategoria = subcategorias.Count == 0 ? 1 : subcategorias.Last().CodigoSubcategoria + 1
                         };
 
-                        context.Subcategorias.Add(nuevaSubcategoria);
+                        context.Subcategorias.Add(NuevaSubcategoria);
                         context.SaveChanges();
+                        DialogResult = DialogResult.OK;
                         this.Close();
                     }
                 }
@@ -89,6 +97,15 @@ namespace GestionDeStock.Formularios
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void textBoxNuevaSubcategoria_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) { 
+                btnCrearSubcategoria.PerformClick();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
         }
     }
 }

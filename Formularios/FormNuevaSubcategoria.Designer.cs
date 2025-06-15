@@ -65,6 +65,7 @@
             textBoxNuevaSubcategoria.Name = "textBoxNuevaSubcategoria";
             textBoxNuevaSubcategoria.Size = new Size(240, 27);
             textBoxNuevaSubcategoria.TabIndex = 2;
+            textBoxNuevaSubcategoria.KeyDown += textBoxNuevaSubcategoria_KeyDown;
             // 
             // btnCrearSubcategoria
             // 

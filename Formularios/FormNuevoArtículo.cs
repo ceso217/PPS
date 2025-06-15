@@ -21,7 +21,7 @@ namespace GestionDeStock
             Iniciar();
         }
 
-        public void Iniciar()
+        private void Iniciar()
         {
             using (var context = new StockBDContext())
             {
@@ -51,33 +51,10 @@ namespace GestionDeStock
                 comboBoxSubcategoria.DisplayMember = "Nombre";
                 comboBoxSubcategoria.ValueMember = "Id";
 
-                // método de actualización de subcategorías según la categoría seleccionada
+                // invocación del método de actualización de subcategorías según la categoría seleccionada
                 comboBoxCategoria.SelectedIndexChanged += (s, e) =>
                 {
-                    var categoriaId = (int)comboBoxCategoria.SelectedValue;
-
-                    var subcategoriasSeleccionadas = subcategorias
-                        .Where(s => s.CategoriaId == categoriaId)
-                        .ToList();
-
-                    if (categoriaId == 0)
-                    {
-                        comboBoxSubcategoria.DataSource = placeholder;
-                        comboBoxSubcategoria.DisplayMember = "Nombre";
-                        comboBoxSubcategoria.ValueMember = "Id";
-                    }
-                    else
-                    {
-                        subcategoriasSeleccionadas.Insert(0, new Subcategoria
-                        {
-                            Id = 0,
-                            Nombre = "Seleccione una subcategoría"
-                        });
-
-                        comboBoxSubcategoria.DataSource = subcategoriasSeleccionadas;
-                        comboBoxSubcategoria.DisplayMember = "Nombre";
-                        comboBoxSubcategoria.ValueMember = "Id";
-                    }
+                    actualizarSubcategorias(subcategorias, placeholder);
                 };
 
                 marcas.Insert(0, new Marca
@@ -103,16 +80,27 @@ namespace GestionDeStock
                 // evento de apertura del formulario de creación de subcategoria
                 btnCrearSubcategoria.Click += (s, e) =>
                 {
-                    var popup = new FormNuevaSubcategoria();
+                    int idCategoriaSeleccionada = (int)comboBoxCategoria.SelectedValue;
 
-                    popup.ShowDialog();
+                    var popup = new FormNuevaSubcategoria(idCategoriaSeleccionada);
 
-                    using (var context = new StockBDContext())
+                    var resultado = popup.ShowDialog();
+
+                    if (resultado == DialogResult.OK)
                     {
-                        subcategorias = context.Subcategorias.ToList();
-                    }
+                        Subcategoria nueva = popup.NuevaSubcategoria;
+                        Categoria seleccionada = popup.CategoriaPerteneciente;
 
-                    comboBoxCategoria.SelectedIndex = 0;
+                        using (var context = new StockBDContext())
+                        {
+                            subcategorias = context.Subcategorias.ToList();
+                        }
+
+                        actualizarSubcategorias(subcategorias, placeholder);
+
+                        comboBoxCategoria.SelectedIndex = seleccionada.CategoriaId;
+                        comboBoxSubcategoria.SelectedValue = nueva.Id;
+                    }
                 };
 
                 // evento de creación del artículo
@@ -138,7 +126,7 @@ namespace GestionDeStock
 
                             var articulos = context.Articulos.Where(a => a.CategoriaId == (int)comboBoxCategoria.SelectedValue && a.SubcategoriaId == subcategoriaSeleccionada.Id).OrderBy(a => a.CodigoArticulo).ToList();
 
-                            int codigoArticulo = 10;
+                            int codigoArticulo = 1;
 
                             if (articulos.LastOrDefault() != null)
                             {
@@ -147,7 +135,8 @@ namespace GestionDeStock
 
                             var nuevoArticulo = new Articulo
                             {
-                                CodigoArticulo = codigoArticulo,
+                                // recordar que esto funciona siempre y cuando no haya más de 9 subcategorías en la misma categoría o más de 9999 artículos en la misma subcategoría
+                                CodigoArticulo = articulos.LastOrDefault() == null ? ((int)comboBoxCategoria.SelectedValue * 100000 + subcategoriaSeleccionada.CodigoSubcategoria * 10000 + 1) : articulos.Last().CodigoArticulo +1,
                                 CategoriaId = (int)comboBoxCategoria.SelectedValue,
                                 CodigoSubcategoria = subcategoriaSeleccionada.CodigoSubcategoria,
                                 SubcategoriaId = subcategoriaSeleccionada.Id,
@@ -177,19 +166,25 @@ namespace GestionDeStock
         {
             var popup = new FormNuevaCategoria();
 
-            popup.ShowDialog();
+            var resultado = popup.ShowDialog();
 
-            using (var context = new StockBDContext())
+            if (resultado == DialogResult.OK)
             {
-                var categorias = context.Categorias.ToList();
-                categorias.Insert(0, new Categoria
+                using (var context = new StockBDContext())
                 {
-                    CategoriaId = 0,
-                    Nombre = "Seleccione una categoría"
-                });
-                comboBoxCategoria.DataSource = categorias;
-                comboBoxCategoria.DisplayMember = "Nombre";
-                comboBoxCategoria.ValueMember = "CategoriaId";
+                    var categorias = context.Categorias.ToList();
+                    categorias.Insert(0, new Categoria
+                    {
+                        CategoriaId = 0,
+                        Nombre = "Seleccione una categoría"
+                    });
+                    comboBoxCategoria.DataSource = categorias;
+                    comboBoxCategoria.DisplayMember = "Nombre";
+                    comboBoxCategoria.ValueMember = "CategoriaId";
+
+                    Categoria nueva = popup.NuevaCategoria;
+                    comboBoxCategoria.SelectedIndex = nueva.CategoriaId;
+                }
             }
         }
 
@@ -230,6 +225,35 @@ namespace GestionDeStock
                 comboBoxMarca.DataSource = marcas;
                 comboBoxMarca.DisplayMember = "Nombre";
                 comboBoxMarca.ValueMember = "Id";
+            }
+        }
+
+        //// método de actualización de subcategorías según la categoría seleccionada
+        private void actualizarSubcategorias(List<Subcategoria> subcategorias, List<Subcategoria> placeholder)
+        {
+            var categoriaId = (int)comboBoxCategoria.SelectedValue;
+
+            var subcategoriasSeleccionadas = subcategorias
+                .Where(s => s.CategoriaId == categoriaId)
+                .ToList();
+
+            if (categoriaId == 0)
+            {
+                comboBoxSubcategoria.DataSource = placeholder;
+                comboBoxSubcategoria.DisplayMember = "Nombre";
+                comboBoxSubcategoria.ValueMember = "Id";
+            }
+            else
+            {
+                subcategoriasSeleccionadas.Insert(0, new Subcategoria
+                {
+                    Id = 0,
+                    Nombre = "Seleccione una subcategoría"
+                });
+
+                comboBoxSubcategoria.DataSource = subcategoriasSeleccionadas;
+                comboBoxSubcategoria.DisplayMember = "Nombre";
+                comboBoxSubcategoria.ValueMember = "Id";
             }
         }
     }

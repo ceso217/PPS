@@ -32,6 +32,8 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             grilla = new DataGridView();
             btnAgregarArt = new Button();
+            textBoxBusqueda = new TextBox();
+            btnEditar = new Button();
             ((System.ComponentModel.ISupportInitialize)grilla).BeginInit();
             SuspendLayout();
             // 
@@ -50,6 +52,7 @@
             grilla.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             grilla.Location = new Point(0, 47);
             grilla.Name = "grilla";
+            grilla.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Control;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -63,29 +66,59 @@
             // 
             // btnAgregarArt
             // 
+            btnAgregarArt.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAgregarArt.Location = new Point(0, 0);
             btnAgregarArt.Name = "btnAgregarArt";
-            btnAgregarArt.Size = new Size(156, 41);
+            btnAgregarArt.Size = new Size(165, 41);
             btnAgregarArt.TabIndex = 1;
             btnAgregarArt.Text = "Agregar artículo";
             btnAgregarArt.UseVisualStyleBackColor = true;
             btnAgregarArt.Click += btnAgregarArt_Click;
             // 
+            // textBoxBusqueda
+            // 
+            textBoxBusqueda.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxBusqueda.ForeColor = Color.Gray;
+            textBoxBusqueda.Location = new Point(365, 7);
+            textBoxBusqueda.Name = "textBoxBusqueda";
+            textBoxBusqueda.Size = new Size(267, 27);
+            textBoxBusqueda.TabIndex = 2;
+            textBoxBusqueda.Text = "Buscar por código, descripción, etc.";
+            textBoxBusqueda.TextChanged += textBoxBusqueda_TextChanged;
+            textBoxBusqueda.Enter += textBoxBusqueda_Enter;
+            textBoxBusqueda.Leave += textBoxBusqueda_Leave;
+            // 
+            // btnEditar
+            // 
+            btnEditar.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnEditar.Location = new Point(171, 0);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(165, 41);
+            btnEditar.TabIndex = 3;
+            btnEditar.Text = "Editar";
+            btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
+            // 
             // ucInventario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(btnEditar);
+            Controls.Add(textBoxBusqueda);
             Controls.Add(btnAgregarArt);
             Controls.Add(grilla);
             Name = "ucInventario";
             Size = new Size(795, 497);
             ((System.ComponentModel.ISupportInitialize)grilla).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private DataGridView grilla;
         private Button btnAgregarArt;
+        private TextBox textBoxBusqueda;
+        private Button btnEditar;
     }
 }
