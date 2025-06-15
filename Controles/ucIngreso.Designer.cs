@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             grillaIngreso = new DataGridView();
+            btnNuevoIngreso = new Button();
             ((System.ComponentModel.ISupportInitialize)grillaIngreso).BeginInit();
             SuspendLayout();
             // 
@@ -37,18 +38,32 @@
             grillaIngreso.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             grillaIngreso.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             grillaIngreso.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grillaIngreso.Location = new Point(0, 47);
+            grillaIngreso.Location = new Point(0, 63);
+            grillaIngreso.Margin = new Padding(3, 4, 3, 4);
             grillaIngreso.Name = "grillaIngreso";
-            grillaIngreso.Size = new Size(805, 434);
+            grillaIngreso.RowHeadersWidth = 51;
+            grillaIngreso.Size = new Size(920, 579);
             grillaIngreso.TabIndex = 1;
+            // 
+            // btnNuevoIngreso
+            // 
+            btnNuevoIngreso.Location = new Point(3, 3);
+            btnNuevoIngreso.Name = "btnNuevoIngreso";
+            btnNuevoIngreso.Size = new Size(189, 55);
+            btnNuevoIngreso.TabIndex = 2;
+            btnNuevoIngreso.Text = "Nuevo Ingreso";
+            btnNuevoIngreso.UseVisualStyleBackColor = true;
+            btnNuevoIngreso.Click += btnNuevoIngreso_Click;
             // 
             // ucIngreso
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(btnNuevoIngreso);
             Controls.Add(grillaIngreso);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "ucIngreso";
-            Size = new Size(805, 481);
+            Size = new Size(920, 641);
             ((System.ComponentModel.ISupportInitialize)grillaIngreso).EndInit();
             ResumeLayout(false);
         }
@@ -56,5 +71,6 @@
         #endregion
 
         private DataGridView grillaIngreso;
+        private Button btnNuevoIngreso;
     }
 }

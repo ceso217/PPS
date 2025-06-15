@@ -129,7 +129,6 @@ namespace GestionDeStock.Controles
             menu.Items.Add("Marcas", null, (s, ev) => MessageBox.Show("Elegiste opción 2"));
             menu.Items.Add("Unidades de medida", null, (s, ev) => MessageBox.Show("Elegiste opción 2"));
 
-
             menu.Show(btnEditar, new Point(0, btnEditar.Height));
         }
     }

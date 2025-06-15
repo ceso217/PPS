@@ -1,4 +1,5 @@
 ﻿using GestionDeStock.DBContext;
+using GestionDeStock.Formularios;
 using GestionDeStock.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -77,7 +78,8 @@ namespace GestionDeStock.Controles
                     //.Include(a => a.Deposito)
                     .ToList();
 
-                foreach(var i in ingresos) {
+                foreach (var i in ingresos)
+                {
                     tabla.Rows.Add(
                         i.Fecha,
                         i.CodigoArticulo,
@@ -94,6 +96,13 @@ namespace GestionDeStock.Controles
                         );
                 }
             }
+        }
+
+        private void btnNuevoIngreso_Click(object sender, EventArgs e)
+        {
+            var popup = new FormNuevoIngreso();
+
+            popup.ShowDialog();
         }
     }
 }
