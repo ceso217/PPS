@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GestionDeStock.DBContext;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,17 +18,28 @@ namespace GestionDeStock.Formularios
             InitializeComponent();
         }
 
-        private void textBox1_Click(object sender, EventArgs e)
+        private void Iniciar()
         {
-            ContextMenuStrip menu = new ContextMenuStrip();
-            menu.Font = new Font(menu.Font.FontFamily, 11);
-            menu.Items.Add("Categorías", null, (s, ev) => MessageBox.Show("Elegiste opción 1"));
-            menu.Items.Add("Subcategorías", null, (s, ev) => MessageBox.Show("Elegiste opción 2"));
-            menu.Items.Add("Artículos", null, (s, ev) => MessageBox.Show("Elegiste opción 2"));
-            menu.Items.Add("Marcas", null, (s, ev) => MessageBox.Show("Elegiste opción 2"));
-            menu.Items.Add("Unidades de medida", null, (s, ev) => MessageBox.Show("Elegiste opción 2"));
 
-            menu.Show(textBox1, new Point(0, textBox1.Height));
+        }
+
+        private void consultar(string filtro)
+        {
+            //comboBox2.Items.Clear();
+            using (var context = new StockBDContext())
+            {
+                var articulos = context.Articulos.Where(a => a.Descripcion.ToLower().Contains(filtro.ToLower())).ToList();
+
+                foreach (var a in articulos)
+                {
+                    comboBox2.Items.Add(a.Descripcion);
+                }
+            }
+        }
+
+        private void comboBox2_TextChanged(object sender, EventArgs e)
+        {
+            consultar(comboBox2.Text);
         }
     }
 }

@@ -1,22 +1,15 @@
 ﻿using GestionDeStock.DBContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GestionDeStock.Controles
 {
     public partial class ucInventario : UserControl
     {
         DataTable tabla;
+        private System.Windows.Forms.Timer timerBusqueda;
+
         public ucInventario()
         {
             InitializeComponent();
@@ -39,6 +32,10 @@ namespace GestionDeStock.Controles
             consultar("");
 
             grilla.DataSource = tabla;
+
+            timerBusqueda = new System.Windows.Forms.Timer();
+            timerBusqueda.Interval = 500;
+            timerBusqueda.Tick += TimerBusqueda_Tick;
         }
 
         private void consultar(string filtro)
@@ -109,14 +106,8 @@ namespace GestionDeStock.Controles
 
         private void textBoxBusqueda_TextChanged(object sender, EventArgs e)
         {
-            var filtroBusqueda = textBoxBusqueda.Text;
-
-            if (filtroBusqueda == "Buscar por código, descripción, etc.")
-            {
-                return;
-            }
-
-            consultar(filtroBusqueda);
+            timerBusqueda.Stop();
+            timerBusqueda.Start();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -130,6 +121,20 @@ namespace GestionDeStock.Controles
             menu.Items.Add("Unidades de medida", null, (s, ev) => MessageBox.Show("Elegiste opción 2"));
 
             menu.Show(btnEditar, new Point(0, btnEditar.Height));
+        }
+
+        private void TimerBusqueda_Tick(object sender, EventArgs e)
+        {
+            timerBusqueda.Stop();
+
+            var filtroBusqueda = textBoxBusqueda.Text;
+
+            if (filtroBusqueda == "Buscar por código, descripción, etc.")
+            {
+                return;
+            }
+
+            consultar(filtroBusqueda);
         }
     }
 }

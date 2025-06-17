@@ -147,7 +147,6 @@ D:\Ceso\PPS\GestiónDeStock\obj\Debug\net8.0-windows\GestionDeStock.pdb
 D:\Ceso\PPS\GestiónDeStock\obj\Debug\net8.0-windows\GestionDeStock.genruntimeconfig.cache
 D:\Ceso\PPS\GestiónDeStock\obj\Debug\net8.0-windows\ref\GestionDeStock.dll
 D:\Ceso\PPS\GestionDeStock\bin\Debug\net8.0-windows\GestionDeStock.exe
-D:\Ceso\PPS\GestionDeStock\bin\Debug\net8.0-windows\GestionDeStock.dll.config
 D:\Ceso\PPS\GestionDeStock\bin\Debug\net8.0-windows\GestionDeStock.deps.json
 D:\Ceso\PPS\GestionDeStock\bin\Debug\net8.0-windows\GestionDeStock.runtimeconfig.json
 D:\Ceso\PPS\GestionDeStock\bin\Debug\net8.0-windows\GestionDeStock.dll
@@ -449,3 +448,5 @@ D:\Ceso\PPS\GestionDeStock\obj\Debug\net8.0-windows\GestionDeStock.Formularios.F
 C:\Users\baron\Desktop\PPS\PPS\obj\Debug\net8.0-windows\GestionDeStock.Formularios.FormNuevaMarca.resources
 C:\Users\baron\Desktop\PPS\PPS\obj\Debug\net8.0-windows\GestionDeStock.Formularios.FormNuevaUnidadDeMedida.resources
 C:\Users\baron\Desktop\PPS\PPS\obj\Debug\net8.0-windows\GestionDeStock.Formularios.FormNuevoIngreso.resources
+D:\Ceso\PPS\GestionDeStock\obj\Debug\net8.0-windows\GestionDeStock.Formularios.FormNuevoIngreso.resources
+D:\Ceso\PPS\GestionDeStock\bin\Debug\net8.0-windows\GestionDeStock.dll.config
