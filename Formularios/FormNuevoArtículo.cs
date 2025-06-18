@@ -238,7 +238,7 @@ namespace GestionDeStock
             }
         }
 
-        //// método de actualización de subcategorías según la categoría seleccionada
+        // método de actualización de subcategorías según la categoría seleccionada
         private void actualizarSubcategorias(List<Subcategoria> subcategorias, List<Subcategoria> placeholder)
         {
             var categoriaId = (int)comboBoxCategoria.SelectedValue;

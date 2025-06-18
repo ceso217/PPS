@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
+            btnElegirArticulo = new Button();
             SuspendLayout();
             // 
             // label1
@@ -43,30 +42,22 @@
             label1.TabIndex = 0;
             label1.Text = "Nuevo Ingreso";
             // 
-            // comboBox1
+            // btnElegirArticulo
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(124, 101);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(170, 23);
-            comboBox1.TabIndex = 1;
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(300, 101);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(420, 23);
-            comboBox2.TabIndex = 2;
-            comboBox2.TextChanged += comboBox2_TextChanged;
+            btnElegirArticulo.Location = new Point(341, 70);
+            btnElegirArticulo.Name = "btnElegirArticulo";
+            btnElegirArticulo.Size = new Size(123, 36);
+            btnElegirArticulo.TabIndex = 3;
+            btnElegirArticulo.Text = "Elegir artículo";
+            btnElegirArticulo.UseVisualStyleBackColor = true;
+            btnElegirArticulo.Click += btnElegirArticulo_Click;
             // 
             // FormNuevoIngreso
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(827, 432);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
+            Controls.Add(btnElegirArticulo);
             Controls.Add(label1);
             Margin = new Padding(3, 2, 3, 2);
             Name = "FormNuevoIngreso";
@@ -78,7 +69,6 @@
         #endregion
 
         private Label label1;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private Button btnElegirArticulo;
     }
 }

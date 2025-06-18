@@ -3,28 +3,44 @@
   "WorkspaceRootPath": "D:\\Ceso\\PPS\\GestionDeStock\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|D:\\Ceso\\PPS\\GestionDeStock\\formularios\\formseleccionararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:formularios\\formseleccionararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|d:\\ceso\\pps\\gestiondestock\\formularios\\formseleccionararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:formularios\\formseleccionararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|d:\\ceso\\pps\\gestiondestock\\formularios\\formnuevoingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:formularios\\formnuevoingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|d:\\ceso\\pps\\gestiondestock\\controles\\ucinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:controles\\ucinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|d:\\ceso\\pps\\gestiondestock\\controles\\ucingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:controles\\ucingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|D:\\Ceso\\PPS\\GestionDeStock\\formularios\\formnuevoingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:formularios\\formnuevoingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|D:\\Ceso\\PPS\\GestionDeStock\\controles\\ucingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:controles\\ucingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|d:\\ceso\\pps\\gestiondestock\\formularios\\formseleccionararticulo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:formularios\\formseleccionararticulo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|D:\\Ceso\\PPS\\GestionDeStock\\controles\\ucinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|d:\\ceso\\pps\\gestiondestock\\controles\\ucinventario.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:controles\\ucinventario.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|d:\\ceso\\pps\\gestiondestock\\controles\\ucinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:controles\\ucinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|d:\\ceso\\pps\\gestiondestock\\controles\\ucinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:controles\\ucinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|d:\\ceso\\pps\\gestiondestock\\controles\\ucingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:controles\\ucingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|D:\\Ceso\\PPS\\GestionDeStock\\controles\\ucingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:controles\\ucingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,13 +58,89 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ucInventario.cs",
+              "DocumentMoniker": "D:\\Ceso\\PPS\\GestionDeStock\\Controles\\ucInventario.cs",
+              "RelativeDocumentMoniker": "Controles\\ucInventario.cs",
+              "ToolTip": "D:\\Ceso\\PPS\\GestionDeStock\\Controles\\ucInventario.cs",
+              "RelativeToolTip": "Controles\\ucInventario.cs",
+              "ViewState": "AgIAAJUAAAAAAAAAAADgv+0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T07:56:18.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ucInventario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Ceso\\PPS\\GestionDeStock\\Controles\\ucInventario.cs",
+              "RelativeDocumentMoniker": "Controles\\ucInventario.cs",
+              "ToolTip": "D:\\Ceso\\PPS\\GestionDeStock\\Controles\\ucInventario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Controles\\ucInventario.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T07:56:08.534Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ucInventario.Designer.cs",
+              "DocumentMoniker": "D:\\Ceso\\PPS\\GestionDeStock\\Controles\\ucInventario.Designer.cs",
+              "RelativeDocumentMoniker": "Controles\\ucInventario.Designer.cs",
+              "ToolTip": "D:\\Ceso\\PPS\\GestionDeStock\\Controles\\ucInventario.Designer.cs",
+              "RelativeToolTip": "Controles\\ucInventario.Designer.cs",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAewKAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T07:42:43.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormSeleccionarArticulo.Designer.cs",
+              "DocumentMoniker": "D:\\Ceso\\PPS\\GestionDeStock\\Formularios\\FormSeleccionarArticulo.Designer.cs",
+              "RelativeDocumentMoniker": "Formularios\\FormSeleccionarArticulo.Designer.cs",
+              "ToolTip": "D:\\Ceso\\PPS\\GestionDeStock\\Formularios\\FormSeleccionarArticulo.Designer.cs*",
+              "RelativeToolTip": "Formularios\\FormSeleccionarArticulo.Designer.cs*",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAuwFMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T07:42:34.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormSeleccionarArticulo.cs",
+              "DocumentMoniker": "D:\\Ceso\\PPS\\GestionDeStock\\Formularios\\FormSeleccionarArticulo.cs",
+              "RelativeDocumentMoniker": "Formularios\\FormSeleccionarArticulo.cs",
+              "ToolTip": "D:\\Ceso\\PPS\\GestionDeStock\\Formularios\\FormSeleccionarArticulo.cs*",
+              "RelativeToolTip": "Formularios\\FormSeleccionarArticulo.cs*",
+              "ViewState": "AgIAANEAAAAAAAAAAIAwwOAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T22:01:59.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "FormSeleccionarArticulo.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Ceso\\PPS\\GestionDeStock\\Formularios\\FormSeleccionarArticulo.cs",
+              "RelativeDocumentMoniker": "Formularios\\FormSeleccionarArticulo.cs",
+              "ToolTip": "D:\\Ceso\\PPS\\GestionDeStock\\Formularios\\FormSeleccionarArticulo.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "Formularios\\FormSeleccionarArticulo.cs [Dise\u00F1o]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T21:57:55.454Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "FormNuevoIngreso.cs",
               "DocumentMoniker": "D:\\Ceso\\PPS\\GestionDeStock\\Formularios\\FormNuevoIngreso.cs",
               "RelativeDocumentMoniker": "Formularios\\FormNuevoIngreso.cs",
-              "ToolTip": "D:\\Ceso\\PPS\\GestionDeStock\\Formularios\\FormNuevoIngreso.cs*",
-              "RelativeToolTip": "Formularios\\FormNuevoIngreso.cs*",
-              "ViewState": "AgIAABMAAAAAAAAAAAAuwBsAAAAmAAAAAAAAAA==",
+              "ToolTip": "D:\\Ceso\\PPS\\GestionDeStock\\Formularios\\FormNuevoIngreso.cs",
+              "RelativeToolTip": "Formularios\\FormNuevoIngreso.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAApwBcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-15T20:20:09.045Z",
               "EditorCaption": ""
@@ -59,61 +151,36 @@
               "Title": "FormNuevoIngreso.cs [Dise\u00F1o]",
               "DocumentMoniker": "D:\\Ceso\\PPS\\GestionDeStock\\Formularios\\FormNuevoIngreso.cs",
               "RelativeDocumentMoniker": "Formularios\\FormNuevoIngreso.cs",
-              "ToolTip": "D:\\Ceso\\PPS\\GestionDeStock\\Formularios\\FormNuevoIngreso.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "Formularios\\FormNuevoIngreso.cs [Dise\u00F1o]*",
+              "ToolTip": "D:\\Ceso\\PPS\\GestionDeStock\\Formularios\\FormNuevoIngreso.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Formularios\\FormNuevoIngreso.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-15T18:07:06.54Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "ucIngreso.cs",
               "DocumentMoniker": "D:\\Ceso\\PPS\\GestionDeStock\\Controles\\ucIngreso.cs",
               "RelativeDocumentMoniker": "Controles\\ucIngreso.cs",
               "ToolTip": "D:\\Ceso\\PPS\\GestionDeStock\\Controles\\ucIngreso.cs",
               "RelativeToolTip": "Controles\\ucIngreso.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAIwGgAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAgwDkAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-15T07:04:01.906Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ucIngreso.cs [Design]",
+              "DocumentIndex": 9,
+              "Title": "ucIngreso.cs [Dise\u00F1o]",
               "DocumentMoniker": "D:\\Ceso\\PPS\\GestionDeStock\\Controles\\ucIngreso.cs",
               "RelativeDocumentMoniker": "Controles\\ucIngreso.cs",
-              "ToolTip": "D:\\Ceso\\PPS\\GestionDeStock\\Controles\\ucIngreso.cs [Design]",
-              "RelativeToolTip": "Controles\\ucIngreso.cs [Design]",
+              "ToolTip": "D:\\Ceso\\PPS\\GestionDeStock\\Controles\\ucIngreso.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Controles\\ucIngreso.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-15T07:03:53.817Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ucInventario.cs",
-              "DocumentMoniker": "D:\\Ceso\\PPS\\GestionDeStock\\Controles\\ucInventario.cs",
-              "RelativeDocumentMoniker": "Controles\\ucInventario.cs",
-              "ToolTip": "D:\\Ceso\\PPS\\GestionDeStock\\Controles\\ucInventario.cs",
-              "RelativeToolTip": "Controles\\ucInventario.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAowCYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T16:33:13.646Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ucInventario.cs [Design]",
-              "DocumentMoniker": "D:\\Ceso\\PPS\\GestionDeStock\\Controles\\ucInventario.cs",
-              "RelativeDocumentMoniker": "Controles\\ucInventario.cs",
-              "ToolTip": "D:\\Ceso\\PPS\\GestionDeStock\\Controles\\ucInventario.cs [Design]",
-              "RelativeToolTip": "Controles\\ucInventario.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T16:33:04.947Z",
-              "EditorCaption": " [Design]"
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

@@ -18,28 +18,10 @@ namespace GestionDeStock.Formularios
             InitializeComponent();
         }
 
-        private void Iniciar()
+        private void btnElegirArticulo_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void consultar(string filtro)
-        {
-            //comboBox2.Items.Clear();
-            using (var context = new StockBDContext())
-            {
-                var articulos = context.Articulos.Where(a => a.Descripcion.ToLower().Contains(filtro.ToLower())).ToList();
-
-                foreach (var a in articulos)
-                {
-                    comboBox2.Items.Add(a.Descripcion);
-                }
-            }
-        }
-
-        private void comboBox2_TextChanged(object sender, EventArgs e)
-        {
-            consultar(comboBox2.Text);
+            var popup = new FormSeleccionarArticulo();
+            popup.ShowDialog();
         }
     }
 }

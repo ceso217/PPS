@@ -2,16 +2,24 @@
 using GestionDeStock.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace GestionDeStock.Controles
+namespace GestionDeStock.Formularios
 {
-    public partial class ucInventario : UserControl
+    public partial class FormSeleccionarArticulo : Form
     {
         DataTable tabla;
         private System.Windows.Forms.Timer timerBusqueda;
 
-        public ucInventario()
+        public FormSeleccionarArticulo()
         {
             InitializeComponent();
             Iniciar();
@@ -163,14 +171,6 @@ namespace GestionDeStock.Controles
 
         }
 
-        //apertura de modal para crear artículo y actualización de registros
-        private void btnAgregarArt_Click(object sender, EventArgs e)
-        {
-            var popup = new FormNuevoArtículo();
-            popup.ShowDialog();
-            consultar("");
-        }
-
         //método para borrar el placeholder al hacer click en el textbox
         private void textBoxBusqueda_Enter(object sender, EventArgs e)
         {
@@ -213,20 +213,6 @@ namespace GestionDeStock.Controles
             consultar(filtroBusqueda);
         }
 
-        // funiconalidad del botón editar
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            ContextMenuStrip menu = new ContextMenuStrip();
-            menu.Font = new Font(menu.Font.FontFamily, 11);
-            menu.Items.Add("Categorías", null, (s, ev) => MessageBox.Show("Elegiste opción 1"));
-            menu.Items.Add("Subcategorías", null, (s, ev) => MessageBox.Show("Elegiste opción 2"));
-            menu.Items.Add("Artículos", null, (s, ev) => MessageBox.Show("Elegiste opción 2"));
-            menu.Items.Add("Marcas", null, (s, ev) => MessageBox.Show("Elegiste opción 2"));
-            menu.Items.Add("Unidades de medida", null, (s, ev) => MessageBox.Show("Elegiste opción 2"));
-
-            menu.Show(btnEditar, new Point(0, btnEditar.Height));
-        }
-
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             textBoxBusqueda.Text = "Buscar por código, descripción, etc.";
@@ -234,6 +220,11 @@ namespace GestionDeStock.Controles
             comboBoxCategoria.SelectedIndex = 0;
             comboBoxSubcategoria.SelectedIndex = 0;
             consultar("");
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

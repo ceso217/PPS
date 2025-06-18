@@ -66,17 +66,7 @@ namespace GestionDeStock.Controles
                         Subcategoria = i.Articulo.Subcategoria.Nombre,
                         i.Observaciones,
                         i.Notas
-                    })
-                    //.Include(a => a.Articulo)
-                    //    .ThenInclude(a => a.Marca)
-                    //.Include(a => a.Articulo)
-                    //    .ThenInclude(a => a.UnidadMedida)
-                    //.Include(a => a.Articulo)
-                    //    .ThenInclude(a => a.Subcategoria)
-                    //        .ThenInclude(a => a.Categoria)
-                    //.Include(a => a.Transportista)
-                    //.Include(a => a.Deposito)
-                    .ToList();
+                    }).ToList();
 
                 foreach (var i in ingresos)
                 {
