@@ -37,8 +37,10 @@ namespace GestionDeStock.Formularios
             tabla.Columns.Add("Modelo");
             tabla.Columns.Add("UM");
             tabla.Columns.Add("Stock");
+            tabla.Columns.Add("ArticuloId", typeof(int));
 
             grilla.DataSource = tabla;
+            grilla.Columns["ArticuloId"].Visible = false;
 
             timerBusqueda = new System.Windows.Forms.Timer();
             timerBusqueda.Interval = 500;
@@ -165,7 +167,8 @@ namespace GestionDeStock.Formularios
                         articulo.Marca?.Nombre,
                         articulo.Modelo,
                         articulo.UnidadMedida?.Nombre,
-                        articulo.Stock);
+                        articulo.Stock,
+                        articulo.Id);
                 }
             }
 
@@ -225,6 +228,11 @@ namespace GestionDeStock.Formularios
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            label1.Text = grilla.CurrentRow.Cells["ArticuloId"].Value.ToString();
         }
     }
 }
