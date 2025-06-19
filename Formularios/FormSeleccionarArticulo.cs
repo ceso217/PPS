@@ -18,6 +18,7 @@ namespace GestionDeStock.Formularios
     {
         DataTable tabla;
         private System.Windows.Forms.Timer timerBusqueda;
+        public int ArticuloSeleccionadoId {  get; private set; }
 
         public FormSeleccionarArticulo()
         {
@@ -232,7 +233,8 @@ namespace GestionDeStock.Formularios
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            label1.Text = grilla.CurrentRow.Cells["ArticuloId"].Value.ToString();
+            ArticuloSeleccionadoId = (int)grilla.CurrentRow.Cells["ArticuloId"].Value;
+            DialogResult = DialogResult.OK;
         }
     }
 }
