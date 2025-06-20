@@ -26,5 +26,9 @@ namespace GestionDeStock
             MostrarUC(new ucIngreso());
         }
 
+        private void btnSalida_Click(object sender, EventArgs e)
+        {
+            MostrarUC(new ucSalida());
+        }
     }
 }

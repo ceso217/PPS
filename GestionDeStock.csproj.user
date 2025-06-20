@@ -7,6 +7,9 @@
     <Compile Update="Controles\ucInventario.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Controles\ucSalida.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Formularios\FormNuevaCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -22,7 +25,7 @@
     <Compile Update="Formularios\FormNuevoDeposito.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Formularios\FormNuevoIngreso.cs">
+    <Compile Update="Formularios\FormNuevoMovimiento.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Formularios\FormNuevoProveedor.cs">

@@ -41,12 +41,15 @@ namespace GestionDeStock.Controles
             tabla.Columns.Add("Notas");
 
             grillaIngreso.DataSource = tabla;
+            grillaIngreso.AllowUserToAddRows = false;
+            grillaIngreso.ReadOnly = true;
 
             consultar();
         }
 
         private void consultar()
         {
+            tabla.Rows.Clear();
             using (var context = new StockBDContext())
             {
                 var ingresos = context.Movimientos
@@ -70,7 +73,7 @@ namespace GestionDeStock.Controles
                 foreach (var i in ingresos)
                 {
                     tabla.Rows.Add(
-                        i.Fecha,
+                        i.Fecha.ToString("dd/MM/yyyy hh:mm tt"),
                         i.Deposito,
                         i.Categoria,
                         i.Subcategoria,
@@ -89,9 +92,9 @@ namespace GestionDeStock.Controles
 
         private void btnNuevoIngreso_Click(object sender, EventArgs e)
         {
-            var popup = new FormNuevoIngreso();
-
+            var popup = new FormNuevoMovimiento(TipoMovimiento.Ingreso);
             popup.ShowDialog();
+            consultar();
         }
     }
 }

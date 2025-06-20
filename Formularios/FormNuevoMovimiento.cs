@@ -14,17 +14,23 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace GestionDeStock.Formularios
 {
-    public partial class FormNuevoIngreso : Form
+    public partial class FormNuevoMovimiento : Form
     {
         DataTable tabla;
-        public FormNuevoIngreso()
+        TipoMovimiento tipoMovimiento;
+        public FormNuevoMovimiento(TipoMovimiento tipo)
         {
             InitializeComponent();
             Iniciar();
+            tipoMovimiento = tipo;
         }
 
         private void Iniciar()
         {
+            if (tipoMovimiento == TipoMovimiento.Salida) {
+                label1.Text = "Nueva Salida";
+                this.Text = "Nueva Salida";
+            }
             tabla = new DataTable();
             tabla.Columns.Add("Categoría");
             tabla.Columns.Add("Subcategoría");
@@ -256,25 +262,41 @@ namespace GestionDeStock.Formularios
             } else
             {
                 int articuloSeleccionadoId = (int)grilla.Rows[0].Cells["ArticuloId"].Value;
+                int cantidad = (int)numericUpDownCantidad.Value;
 
                 Movimiento nuevoIngreso = new Movimiento
                 {
                     Fecha = DateTime.Now,
-                    Cantidad = (int)numericUpDownCantidad.Value,
+                    Cantidad = cantidad,
                     Notas = textBoxNotas.Text,
                     ProveedorId = (int)comboBoxProveedor.SelectedIndex == 0 ? null : (int)comboBoxProveedor.SelectedValue,
                     TransportistaId = (int)comboBoxTransportista.SelectedIndex == 0 ? null : (int)comboBoxTransportista.SelectedValue,
                     DepositoId = (int)comboBoxDestino.SelectedIndex == 0 ? null : (int)comboBoxDestino.SelectedValue,
                     ArticuloId = articuloSeleccionadoId,
-                    Tipo = 0
+                    Tipo = tipoMovimiento
                 };
 
-                using (var context = new StockBDContext())
+                if (tipoMovimiento == TipoMovimiento.Salida)
                 {
-                    context.Movimientos.Add(nuevoIngreso);
-                    context.SaveChanges();
+                    using (var context = new StockBDContext())
+                    {
+                        context.Movimientos.Add(nuevoIngreso);
+                        var articulo = context.Articulos.FirstOrDefault(a => a.Id == articuloSeleccionadoId);
+                        articulo.Stock = articulo.Stock - cantidad;
+                        context.SaveChanges();
+                    }
                 }
-                this.Close();
+                else
+                {
+                    using (var context = new StockBDContext())
+                    {
+                        context.Movimientos.Add(nuevoIngreso);
+                        var articulo = context.Articulos.FirstOrDefault(a => a.Id == articuloSeleccionadoId);
+                        articulo.Stock = articulo.Stock + cantidad;
+                        context.SaveChanges();
+                    }
+                }
+                    this.Close();
             }
         }
 
