@@ -15,10 +15,10 @@ namespace GestionDeStock.DBContext
 
         public DbSet<Articulo> Articulos { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Proveedor> Proveedores { get; set; }
         public DbSet<Deposito> Depositos { get; set; }
         public DbSet<Marca> Marcas { get; set; }
         public DbSet<Movimiento> Movimientos { get; set; }
-        public DbSet<Proveedor> Proveedores { get; set; }
         public DbSet<Subcategoria> Subcategorias { get; set; }
         public DbSet<Transportista> Transportistas { get; set; }
         public DbSet<UnidadMedida> UnidadesDeMedida { get; set; }
@@ -46,22 +46,22 @@ namespace GestionDeStock.DBContext
 
             modelBuilder.Entity<Movimiento>()
                 .HasOne(i => i.Proveedor)
-                .WithMany(p => p.Ingresos)
+                .WithMany(p => p.Movimientos)
                 .HasForeignKey(i => i.ProveedorId);
 
             modelBuilder.Entity<Movimiento>()
-                .HasOne(i => i.Deposito)
-                .WithMany(d => d.Ingresos)
-                .HasForeignKey(i => i.DepositoId);
+                .HasOne(m => m.Deposito)
+                .WithMany(d => d.Movimientos)
+                .HasForeignKey(m => m.DepositoId);
 
             modelBuilder.Entity<Movimiento>()
                 .HasOne(i => i.Transportista)
-                .WithMany(t => t.Ingresos)
+                .WithMany(t => t.Movimientos)
                 .HasForeignKey(i => i.TransportistaId);
 
             modelBuilder.Entity<Movimiento>()
                 .HasOne(i => i.Articulo)
-                .WithMany(a => a.Ingresos)
+                .WithMany(a => a.Movimientos)
                 .HasForeignKey(i => i.ArticuloId);
         }
 

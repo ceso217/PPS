@@ -26,6 +26,6 @@ namespace GestionDeStock.Models
         public Marca Marca { get; set; }
         public int? UnidadMedidaId { get; set; } = null;
         public UnidadMedida UnidadMedida { get; set; }
-        public ICollection<Movimiento> Ingresos { get; set; }
+        public ICollection<Movimiento> Movimientos { get; set; }
     }
 }

@@ -28,17 +28,16 @@ namespace GestionDeStock.Controles
         {
             tabla = new DataTable();
             tabla.Columns.Add("Fecha");
-            //tabla.Columns.Add("Origen"); 
+            tabla.Columns.Add("Depósito");
+            tabla.Columns.Add("Categoría");
+            tabla.Columns.Add("Subcategoría");
             tabla.Columns.Add("Id");
             tabla.Columns.Add("Descripción");
             tabla.Columns.Add("Marca");
             tabla.Columns.Add("UM");
             tabla.Columns.Add("Cantidad");
-            tabla.Columns.Add("Destino/Obra");
+            tabla.Columns.Add("Proveedor");
             tabla.Columns.Add("Transportista");
-            tabla.Columns.Add("Categoría");
-            tabla.Columns.Add("Subcategoría");
-            tabla.Columns.Add("Observaciones");
             tabla.Columns.Add("Notas");
 
             grillaIngreso.DataSource = tabla;
@@ -61,10 +60,10 @@ namespace GestionDeStock.Controles
                         UM = i.Articulo.UnidadMedida.Nombre,
                         i.Cantidad,
                         Deposito = i.Deposito.Nombre,
+                        Proveedor = i.Proveedor.Nombre,
                         Transportista = i.Transportista.Nombre,
                         Categoria = i.Articulo.Subcategoria.Categoria.Nombre,
                         Subcategoria = i.Articulo.Subcategoria.Nombre,
-                        i.Observaciones,
                         i.Notas
                     }).ToList();
 
@@ -72,16 +71,16 @@ namespace GestionDeStock.Controles
                 {
                     tabla.Rows.Add(
                         i.Fecha,
+                        i.Deposito,
+                        i.Categoria,
+                        i.Subcategoria,
                         i.CodigoArticulo,
                         i.Descripcion,
                         i.Marca,
                         i.UM,
                         i.Cantidad,
-                        i.Deposito,
+                        i.Proveedor,
                         i.Transportista,
-                        i.Categoria,
-                        i.Subcategoria,
-                        i.Observaciones,
                         i.Notas
                         );
                 }

@@ -43,6 +43,10 @@
             // 
             // grilla
             // 
+            grilla.AllowUserToAddRows = false;
+            grilla.AllowUserToDeleteRows = false;
+            grilla.AllowUserToResizeColumns = false;
+            grilla.AllowUserToResizeRows = false;
             grilla.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             grilla.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -128,7 +132,7 @@
             comboBoxSubcategoria.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxSubcategoria.Font = new Font("Segoe UI", 11.25F);
             comboBoxSubcategoria.FormattingEnabled = true;
-            comboBoxSubcategoria.Location = new Point(677, 6);
+            comboBoxSubcategoria.Location = new Point(677, 8);
             comboBoxSubcategoria.Name = "comboBoxSubcategoria";
             comboBoxSubcategoria.Size = new Size(252, 28);
             comboBoxSubcategoria.TabIndex = 6;

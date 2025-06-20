@@ -112,7 +112,7 @@
             textBoxDescription.Font = new Font("Segoe UI", 10.2F);
             textBoxDescription.Location = new Point(187, 217);
             textBoxDescription.Name = "textBoxDescription";
-            textBoxDescription.Size = new Size(628, 26);
+            textBoxDescription.Size = new Size(581, 26);
             textBoxDescription.TabIndex = 5;
             // 
             // textBox2
@@ -136,7 +136,7 @@
             // textBox3
             // 
             textBox3.Font = new Font("Segoe UI", 10.2F);
-            textBox3.Location = new Point(431, 284);
+            textBox3.Location = new Point(418, 284);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(134, 26);
             textBox3.TabIndex = 9;
@@ -145,7 +145,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 10.2F);
-            label5.Location = new Point(364, 287);
+            label5.Location = new Point(356, 288);
             label5.Name = "label5";
             label5.Size = new Size(56, 19);
             label5.TabIndex = 8;
@@ -155,7 +155,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 10.2F);
-            label6.Location = new Point(601, 287);
+            label6.Location = new Point(571, 288);
             label6.Name = "label6";
             label6.Size = new Size(79, 19);
             label6.TabIndex = 10;
@@ -168,7 +168,7 @@
             comboBoxMarca.FormattingEnabled = true;
             comboBoxMarca.Location = new Point(187, 419);
             comboBoxMarca.Name = "comboBoxMarca";
-            comboBoxMarca.Size = new Size(238, 27);
+            comboBoxMarca.Size = new Size(287, 27);
             comboBoxMarca.TabIndex = 13;
             // 
             // label7
@@ -188,7 +188,7 @@
             comboBoxUM.FormattingEnabled = true;
             comboBoxUM.Location = new Point(187, 351);
             comboBoxUM.Name = "comboBoxUM";
-            comboBoxUM.Size = new Size(238, 27);
+            comboBoxUM.Size = new Size(287, 27);
             comboBoxUM.TabIndex = 15;
             // 
             // label8
@@ -239,7 +239,7 @@
             // 
             btnAgregar.BackColor = Color.RosyBrown;
             btnAgregar.Font = new Font("Segoe UI", 12F);
-            btnAgregar.Location = new Point(297, 496);
+            btnAgregar.Location = new Point(301, 498);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(111, 40);
             btnAgregar.TabIndex = 18;
@@ -250,7 +250,7 @@
             // 
             btnCancelar.BackColor = Color.RosyBrown;
             btnCancelar.Font = new Font("Segoe UI", 12F);
-            btnCancelar.Location = new Point(472, 496);
+            btnCancelar.Location = new Point(476, 498);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(111, 40);
             btnCancelar.TabIndex = 19;
@@ -261,7 +261,7 @@
             // numericUpDownStock
             // 
             numericUpDownStock.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            numericUpDownStock.Location = new Point(703, 284);
+            numericUpDownStock.Location = new Point(656, 285);
             numericUpDownStock.Margin = new Padding(3, 5, 3, 5);
             numericUpDownStock.Maximum = new decimal(new int[] { 10000000, 0, 0, 0 });
             numericUpDownStock.Name = "numericUpDownStock";
@@ -272,9 +272,9 @@
             // 
             btnCrearCategoria.FlatStyle = FlatStyle.System;
             btnCrearCategoria.Font = new Font("Segoe UI", 10.2F);
-            btnCrearCategoria.Location = new Point(506, 83);
+            btnCrearCategoria.Location = new Point(537, 82);
             btnCrearCategoria.Name = "btnCrearCategoria";
-            btnCrearCategoria.Size = new Size(197, 35);
+            btnCrearCategoria.Size = new Size(231, 35);
             btnCrearCategoria.TabIndex = 21;
             btnCrearCategoria.Text = "Crear nueva categoría";
             btnCrearCategoria.UseVisualStyleBackColor = true;
@@ -284,9 +284,9 @@
             // 
             btnCrearSubcategoria.FlatStyle = FlatStyle.System;
             btnCrearSubcategoria.Font = new Font("Segoe UI", 10.2F);
-            btnCrearSubcategoria.Location = new Point(506, 146);
+            btnCrearSubcategoria.Location = new Point(537, 145);
             btnCrearSubcategoria.Name = "btnCrearSubcategoria";
-            btnCrearSubcategoria.Size = new Size(197, 35);
+            btnCrearSubcategoria.Size = new Size(231, 35);
             btnCrearSubcategoria.TabIndex = 22;
             btnCrearSubcategoria.Text = "Crear nueva subcategoría";
             btnCrearSubcategoria.UseVisualStyleBackColor = true;
@@ -295,7 +295,7 @@
             // 
             btnCrearMarca.FlatStyle = FlatStyle.System;
             btnCrearMarca.Font = new Font("Segoe UI", 10.2F);
-            btnCrearMarca.Location = new Point(472, 415);
+            btnCrearMarca.Location = new Point(537, 411);
             btnCrearMarca.Name = "btnCrearMarca";
             btnCrearMarca.Size = new Size(231, 35);
             btnCrearMarca.TabIndex = 23;
@@ -307,7 +307,7 @@
             // 
             btnCrearUM.FlatStyle = FlatStyle.System;
             btnCrearUM.Font = new Font("Segoe UI", 10.2F);
-            btnCrearUM.Location = new Point(472, 347);
+            btnCrearUM.Location = new Point(537, 346);
             btnCrearUM.Name = "btnCrearUM";
             btnCrearUM.Size = new Size(231, 35);
             btnCrearUM.TabIndex = 24;
@@ -319,7 +319,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(850, 554);
+            ClientSize = new Size(865, 561);
             Controls.Add(btnCrearUM);
             Controls.Add(btnCrearMarca);
             Controls.Add(btnCrearSubcategoria);

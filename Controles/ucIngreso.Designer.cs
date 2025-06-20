@@ -38,18 +38,19 @@
             grillaIngreso.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             grillaIngreso.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             grillaIngreso.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grillaIngreso.Location = new Point(0, 63);
-            grillaIngreso.Margin = new Padding(3, 4, 3, 4);
+            grillaIngreso.Location = new Point(0, 47);
             grillaIngreso.Name = "grillaIngreso";
             grillaIngreso.RowHeadersWidth = 51;
-            grillaIngreso.Size = new Size(920, 579);
+            grillaIngreso.Size = new Size(805, 434);
             grillaIngreso.TabIndex = 1;
             // 
             // btnNuevoIngreso
             // 
-            btnNuevoIngreso.Location = new Point(3, 3);
+            btnNuevoIngreso.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnNuevoIngreso.Location = new Point(3, 2);
+            btnNuevoIngreso.Margin = new Padding(3, 2, 3, 2);
             btnNuevoIngreso.Name = "btnNuevoIngreso";
-            btnNuevoIngreso.Size = new Size(189, 55);
+            btnNuevoIngreso.Size = new Size(165, 41);
             btnNuevoIngreso.TabIndex = 2;
             btnNuevoIngreso.Text = "Nuevo Ingreso";
             btnNuevoIngreso.UseVisualStyleBackColor = true;
@@ -57,13 +58,12 @@
             // 
             // ucIngreso
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(btnNuevoIngreso);
             Controls.Add(grillaIngreso);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "ucIngreso";
-            Size = new Size(920, 641);
+            Size = new Size(805, 481);
             ((System.ComponentModel.ISupportInitialize)grillaIngreso).EndInit();
             ResumeLayout(false);
         }

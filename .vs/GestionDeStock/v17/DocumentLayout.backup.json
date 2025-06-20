@@ -1,46 +1,78 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Ceso\\PPS\\GestionDeStock\\",
+  "WorkspaceRootPath": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|d:\\ceso\\pps\\gestiondestock\\formularios\\formseleccionararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:formularios\\formseleccionararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|d:\\ceso\\pps\\gestiondestock\\formularios\\formseleccionararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:formularios\\formseleccionararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|d:\\ceso\\pps\\gestiondestock\\formularios\\formseleccionararticulo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:formularios\\formseleccionararticulo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|d:\\ceso\\pps\\gestiondestock\\formularios\\formnuevoingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:formularios\\formnuevoingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|D:\\Ceso\\PPS\\GestionDeStock\\formularios\\formnuevoingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|C:\\Users\\baron\\Desktop\\PPS\\PPS\\formularios\\formnuevoingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:formularios\\formnuevoingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|d:\\ceso\\pps\\gestiondestock\\controles\\ucinventario.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:controles\\ucinventario.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|c:\\users\\baron\\desktop\\pps\\pps\\formularios\\formseleccionararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:formularios\\formseleccionararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|d:\\ceso\\pps\\gestiondestock\\controles\\ucinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:controles\\ucinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|c:\\users\\baron\\desktop\\pps\\pps\\formularios\\formnuevoingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:formularios\\formnuevoingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|D:\\Ceso\\PPS\\GestionDeStock\\controles\\ucinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:controles\\ucinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|c:\\users\\baron\\desktop\\pps\\pps\\formularios\\formnuevoart\u00EDculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:formularios\\formnuevoart\u00EDculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|d:\\ceso\\pps\\gestiondestock\\controles\\ucingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|c:\\users\\baron\\desktop\\pps\\pps\\models\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:models\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|c:\\users\\baron\\desktop\\pps\\pps\\models\\movimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:models\\movimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|c:\\users\\baron\\desktop\\pps\\pps\\controles\\ucingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:controles\\ucingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|D:\\Ceso\\PPS\\GestionDeStock\\controles\\ucingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|C:\\Users\\baron\\Desktop\\PPS\\PPS\\controles\\ucingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:controles\\ucingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|c:\\users\\baron\\desktop\\pps\\pps\\formularios\\formseleccionararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:formularios\\formseleccionararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|c:\\users\\baron\\desktop\\pps\\pps\\formularios\\formnuevodeposito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:formularios\\formnuevodeposito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|c:\\users\\baron\\desktop\\pps\\pps\\formularios\\formnuevoproveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:formularios\\formnuevoproveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|C:\\Users\\baron\\Desktop\\PPS\\PPS\\formularios\\formnuevodeposito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:formularios\\formnuevodeposito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|C:\\Users\\baron\\Desktop\\PPS\\PPS\\formularios\\formnuevoart\u00EDculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:formularios\\formnuevoart\u00EDculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|c:\\users\\baron\\desktop\\pps\\pps\\formularios\\formnuevoart\u00EDculo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:formularios\\formnuevoart\u00EDculo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|c:\\users\\baron\\desktop\\pps\\pps\\formularios\\formnuevoingreso.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:formularios\\formnuevoingreso.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|C:\\Users\\baron\\Desktop\\PPS\\PPS\\formularios\\formnuevoproveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:formularios\\formnuevoproveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|c:\\users\\baron\\desktop\\pps\\pps\\formularios\\formnuevoproveedor.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:formularios\\formnuevoproveedor.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|c:\\users\\baron\\desktop\\pps\\pps\\formularios\\formnuevodeposito.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:formularios\\formnuevodeposito.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +82,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,125 +90,225 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ucInventario.cs",
-              "DocumentMoniker": "D:\\Ceso\\PPS\\GestionDeStock\\Controles\\ucInventario.cs",
-              "RelativeDocumentMoniker": "Controles\\ucInventario.cs",
-              "ToolTip": "D:\\Ceso\\PPS\\GestionDeStock\\Controles\\ucInventario.cs",
-              "RelativeToolTip": "Controles\\ucInventario.cs",
-              "ViewState": "AgIAAJUAAAAAAAAAAADgv+0AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Articulo.cs",
+              "DocumentMoniker": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Models\\Articulo.cs",
+              "RelativeDocumentMoniker": "Models\\Articulo.cs",
+              "ToolTip": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Models\\Articulo.cs",
+              "RelativeToolTip": "Models\\Articulo.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T07:56:18.245Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ucInventario.cs [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\Ceso\\PPS\\GestionDeStock\\Controles\\ucInventario.cs",
-              "RelativeDocumentMoniker": "Controles\\ucInventario.cs",
-              "ToolTip": "D:\\Ceso\\PPS\\GestionDeStock\\Controles\\ucInventario.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Controles\\ucInventario.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T07:56:08.534Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ucInventario.Designer.cs",
-              "DocumentMoniker": "D:\\Ceso\\PPS\\GestionDeStock\\Controles\\ucInventario.Designer.cs",
-              "RelativeDocumentMoniker": "Controles\\ucInventario.Designer.cs",
-              "ToolTip": "D:\\Ceso\\PPS\\GestionDeStock\\Controles\\ucInventario.Designer.cs",
-              "RelativeToolTip": "Controles\\ucInventario.Designer.cs",
-              "ViewState": "AgIAAI4AAAAAAAAAAAAewKAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T07:42:43.135Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormSeleccionarArticulo.Designer.cs",
-              "DocumentMoniker": "D:\\Ceso\\PPS\\GestionDeStock\\Formularios\\FormSeleccionarArticulo.Designer.cs",
-              "RelativeDocumentMoniker": "Formularios\\FormSeleccionarArticulo.Designer.cs",
-              "ToolTip": "D:\\Ceso\\PPS\\GestionDeStock\\Formularios\\FormSeleccionarArticulo.Designer.cs",
-              "RelativeToolTip": "Formularios\\FormSeleccionarArticulo.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T07:42:34.981Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormSeleccionarArticulo.cs",
-              "DocumentMoniker": "D:\\Ceso\\PPS\\GestionDeStock\\Formularios\\FormSeleccionarArticulo.cs",
-              "RelativeDocumentMoniker": "Formularios\\FormSeleccionarArticulo.cs",
-              "ToolTip": "D:\\Ceso\\PPS\\GestionDeStock\\Formularios\\FormSeleccionarArticulo.cs*",
-              "RelativeToolTip": "Formularios\\FormSeleccionarArticulo.cs*",
-              "ViewState": "AgIAANcAAAAAAAAAAAAAwOoAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T22:01:59.713Z",
+              "WhenOpened": "2025-06-20T04:39:53.806Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FormSeleccionarArticulo.cs [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\Ceso\\PPS\\GestionDeStock\\Formularios\\FormSeleccionarArticulo.cs",
+              "Title": "FormSeleccionarArticulo.cs",
+              "DocumentMoniker": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\FormSeleccionarArticulo.cs",
               "RelativeDocumentMoniker": "Formularios\\FormSeleccionarArticulo.cs",
-              "ToolTip": "D:\\Ceso\\PPS\\GestionDeStock\\Formularios\\FormSeleccionarArticulo.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "Formularios\\FormSeleccionarArticulo.cs [Dise\u00F1o]*",
+              "ToolTip": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\FormSeleccionarArticulo.cs",
+              "RelativeToolTip": "Formularios\\FormSeleccionarArticulo.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAwwDAAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T21:57:55.454Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormNuevoIngreso.cs",
-              "DocumentMoniker": "D:\\Ceso\\PPS\\GestionDeStock\\Formularios\\FormNuevoIngreso.cs",
-              "RelativeDocumentMoniker": "Formularios\\FormNuevoIngreso.cs",
-              "ToolTip": "D:\\Ceso\\PPS\\GestionDeStock\\Formularios\\FormNuevoIngreso.cs",
-              "RelativeToolTip": "Formularios\\FormNuevoIngreso.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAApwBcAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T20:20:09.045Z",
+              "WhenOpened": "2025-06-19T23:36:30.236Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormNuevoIngreso.cs [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\Ceso\\PPS\\GestionDeStock\\Formularios\\FormNuevoIngreso.cs",
-              "RelativeDocumentMoniker": "Formularios\\FormNuevoIngreso.cs",
-              "ToolTip": "D:\\Ceso\\PPS\\GestionDeStock\\Formularios\\FormNuevoIngreso.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Formularios\\FormNuevoIngreso.cs [Dise\u00F1o]",
+              "DocumentIndex": 8,
+              "Title": "FormSeleccionarArticulo.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\FormSeleccionarArticulo.cs",
+              "RelativeDocumentMoniker": "Formularios\\FormSeleccionarArticulo.cs",
+              "ToolTip": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\FormSeleccionarArticulo.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Formularios\\FormSeleccionarArticulo.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T18:07:06.54Z"
+              "WhenOpened": "2025-06-19T23:36:25.377Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ucIngreso.cs",
-              "DocumentMoniker": "D:\\Ceso\\PPS\\GestionDeStock\\Controles\\ucIngreso.cs",
-              "RelativeDocumentMoniker": "Controles\\ucIngreso.cs",
-              "ToolTip": "D:\\Ceso\\PPS\\GestionDeStock\\Controles\\ucIngreso.cs",
-              "RelativeToolTip": "Controles\\ucIngreso.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAgwDkAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "FormNuevoProveedor.cs",
+              "DocumentMoniker": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\FormNuevoProveedor.cs",
+              "RelativeDocumentMoniker": "Formularios\\FormNuevoProveedor.cs",
+              "ToolTip": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\FormNuevoProveedor.cs",
+              "RelativeToolTip": "Formularios\\FormNuevoProveedor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T07:04:01.906Z",
+              "WhenOpened": "2025-06-19T22:29:34.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FormNuevoProveedor.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\FormNuevoProveedor.Designer.cs",
+              "RelativeDocumentMoniker": "Formularios\\FormNuevoProveedor.Designer.cs",
+              "ToolTip": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\FormNuevoProveedor.Designer.cs",
+              "RelativeToolTip": "Formularios\\FormNuevoProveedor.Designer.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAADwv3IAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T22:29:28.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FormNuevoProveedor.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\FormNuevoProveedor.cs",
+              "RelativeDocumentMoniker": "Formularios\\FormNuevoProveedor.cs",
+              "ToolTip": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\FormNuevoProveedor.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Formularios\\FormNuevoProveedor.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T22:29:24.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FormNuevoIngreso.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\FormNuevoIngreso.Designer.cs",
+              "RelativeDocumentMoniker": "Formularios\\FormNuevoIngreso.Designer.cs",
+              "ToolTip": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\FormNuevoIngreso.Designer.cs*",
+              "RelativeToolTip": "Formularios\\FormNuevoIngreso.Designer.cs*",
+              "ViewState": "AgIAABABAAAAAAAAAADgv5sAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T21:42:14.428Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "FormNuevoDeposito.cs",
+              "DocumentMoniker": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\FormNuevoDeposito.cs",
+              "RelativeDocumentMoniker": "Formularios\\FormNuevoDeposito.cs",
+              "ToolTip": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\FormNuevoDeposito.cs",
+              "RelativeToolTip": "Formularios\\FormNuevoDeposito.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T20:17:43.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FormNuevoDeposito.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\FormNuevoDeposito.Designer.cs",
+              "RelativeDocumentMoniker": "Formularios\\FormNuevoDeposito.Designer.cs",
+              "ToolTip": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\FormNuevoDeposito.Designer.cs",
+              "RelativeToolTip": "Formularios\\FormNuevoDeposito.Designer.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwHIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T20:16:15.926Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FormNuevoDeposito.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\FormNuevoDeposito.cs",
+              "RelativeDocumentMoniker": "Formularios\\FormNuevoDeposito.cs",
+              "ToolTip": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\FormNuevoDeposito.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Formularios\\FormNuevoDeposito.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T20:15:22.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormNuevoArt\u00EDculo.cs",
+              "DocumentMoniker": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\FormNuevoArt\u00EDculo.cs",
+              "RelativeDocumentMoniker": "Formularios\\FormNuevoArt\u00EDculo.cs",
+              "ToolTip": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\FormNuevoArt\u00EDculo.cs",
+              "RelativeToolTip": "Formularios\\FormNuevoArt\u00EDculo.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAowG4AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T20:14:54.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FormNuevoArt\u00EDculo.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\FormNuevoArt\u00EDculo.Designer.cs",
+              "RelativeDocumentMoniker": "Formularios\\FormNuevoArt\u00EDculo.Designer.cs",
+              "ToolTip": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\FormNuevoArt\u00EDculo.Designer.cs",
+              "RelativeToolTip": "Formularios\\FormNuevoArt\u00EDculo.Designer.cs",
+              "ViewState": "AgIAAGUBAAAAAAAAAAAowHsBAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T20:14:50.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FormNuevoArt\u00EDculo.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\FormNuevoArt\u00EDculo.cs",
+              "RelativeDocumentMoniker": "Formularios\\FormNuevoArt\u00EDculo.cs",
+              "ToolTip": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\FormNuevoArt\u00EDculo.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Formularios\\FormNuevoArt\u00EDculo.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T20:14:48.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormNuevoIngreso.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\FormNuevoIngreso.cs",
+              "RelativeDocumentMoniker": "Formularios\\FormNuevoIngreso.cs",
+              "ToolTip": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\FormNuevoIngreso.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "Formularios\\FormNuevoIngreso.cs [Dise\u00F1o]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T22:09:02.901Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ucIngreso.cs [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\Ceso\\PPS\\GestionDeStock\\Controles\\ucIngreso.cs",
+              "DocumentMoniker": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Controles\\ucIngreso.cs",
               "RelativeDocumentMoniker": "Controles\\ucIngreso.cs",
-              "ToolTip": "D:\\Ceso\\PPS\\GestionDeStock\\Controles\\ucIngreso.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Controles\\ucIngreso.cs [Dise\u00F1o]",
               "RelativeToolTip": "Controles\\ucIngreso.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T07:03:53.817Z"
+              "WhenOpened": "2025-06-19T22:02:28.091Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ucIngreso.cs",
+              "DocumentMoniker": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Controles\\ucIngreso.cs",
+              "RelativeDocumentMoniker": "Controles\\ucIngreso.cs",
+              "ToolTip": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Controles\\ucIngreso.cs",
+              "RelativeToolTip": "Controles\\ucIngreso.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAowCgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T22:02:32.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormNuevoIngreso.cs",
+              "DocumentMoniker": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\FormNuevoIngreso.cs",
+              "RelativeDocumentMoniker": "Formularios\\FormNuevoIngreso.cs",
+              "ToolTip": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\FormNuevoIngreso.cs*",
+              "RelativeToolTip": "Formularios\\FormNuevoIngreso.cs*",
+              "ViewState": "AgIAAIEAAAAAAAAAAAASwJ8AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T22:19:12.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Movimiento.cs",
+              "DocumentMoniker": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Models\\Movimiento.cs",
+              "RelativeDocumentMoniker": "Models\\Movimiento.cs",
+              "ToolTip": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Models\\Movimiento.cs",
+              "RelativeToolTip": "Models\\Movimiento.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAqwBYAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T21:41:16.305Z",
+              "EditorCaption": ""
             }
           ]
         }

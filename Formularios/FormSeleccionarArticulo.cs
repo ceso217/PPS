@@ -18,7 +18,7 @@ namespace GestionDeStock.Formularios
     {
         DataTable tabla;
         private System.Windows.Forms.Timer timerBusqueda;
-        public int ArticuloSeleccionadoId {  get; private set; }
+        public int ArticuloSeleccionadoId { get; private set; }
 
         public FormSeleccionarArticulo()
         {
@@ -46,6 +46,7 @@ namespace GestionDeStock.Formularios
             timerBusqueda = new System.Windows.Forms.Timer();
             timerBusqueda.Interval = 500;
             timerBusqueda.Tick += TimerBusqueda_Tick;
+            grilla.AllowUserToAddRows = false;
 
             using (var context = new StockBDContext())
             {

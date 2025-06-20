@@ -452,3 +452,6 @@ D:\Ceso\PPS\GestionDeStock\obj\Debug\net8.0-windows\GestionDeStock.Formularios.F
 D:\Ceso\PPS\GestionDeStock\bin\Debug\net8.0-windows\GestionDeStock.dll.config
 D:\Ceso\PPS\GestionDeStock\obj\Debug\net8.0-windows\GestionDeStock.Formularios.FormSeleccionarArticulo.resources
 C:\Users\baron\Desktop\PPS\PPS\obj\Debug\net8.0-windows\GestionDeStock.Formularios.FormSeleccionarArticulo.resources
+C:\Users\baron\Desktop\PPS\PPS\obj\Debug\net8.0-windows\GestionDeStock.Formularios.FormNuevoDeposito.resources
+C:\Users\baron\Desktop\PPS\PPS\obj\Debug\net8.0-windows\GestionDeStock.Formularios.FormNuevoTransportista.resources
+C:\Users\baron\Desktop\PPS\PPS\obj\Debug\net8.0-windows\GestionDeStock.Formularios.FormNuevoProveedor.resources

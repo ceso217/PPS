@@ -15,15 +15,14 @@ namespace GestionDeStock.Models
     public class Movimiento
     {
         [Key] public int Id { get; set; }
-        public string Fecha { get; set; }
+        public DateTime Fecha { get; set; }
         public int Cantidad { get; set; }
-        public string Notas {  get; set; }
-        public string Observaciones { get; set; }
-        public int ProveedorId { get; set; }
+        public string? Notas {  get; set; }
+        public int? ProveedorId { get; set; }
         public Proveedor Proveedor { get; set; }
-        public int TransportistaId { get; set; }
+        public int? TransportistaId { get; set; }
         public Transportista Transportista { get; set; }
-        public int DepositoId { get; set; }
+        public int? DepositoId { get; set; }
         public Deposito Deposito { get; set; }
         public int ArticuloId {  get; set; }
         public Articulo Articulo { get; set; }
