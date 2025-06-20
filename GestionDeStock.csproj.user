@@ -10,6 +10,9 @@
     <Compile Update="Controles\ucSalida.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Formularios\EditarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Formularios\FormNuevaCategoria.cs">
       <SubType>Form</SubType>
     </Compile>

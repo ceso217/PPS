@@ -21,16 +21,14 @@ namespace GestionDeStock.Formularios
         public FormNuevoMovimiento(TipoMovimiento tipo)
         {
             InitializeComponent();
-            Iniciar();
             tipoMovimiento = tipo;
+            Iniciar();
         }
 
         private void Iniciar()
         {
-            if (tipoMovimiento == TipoMovimiento.Salida) {
-                label1.Text = "Nueva Salida";
-                this.Text = "Nueva Salida";
-            }
+            
+
             tabla = new DataTable();
             tabla.Columns.Add("Categoría");
             tabla.Columns.Add("Subcategoría");
@@ -127,6 +125,12 @@ namespace GestionDeStock.Formularios
                 comboBoxTransportista.DataSource = transportistas;
                 comboBoxTransportista.ValueMember = "Id";
                 comboBoxTransportista.DisplayMember = "Nombre";
+
+                if (tipoMovimiento == TipoMovimiento.Salida)
+                {
+                    label1.Text = "Nueva Salida";
+                    this.Text = "Nueva Salida";
+                }
             }
         }
 

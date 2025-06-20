@@ -1,4 +1,5 @@
 ﻿using GestionDeStock.DBContext;
+using GestionDeStock.Formularios;
 using GestionDeStock.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -216,9 +217,10 @@ namespace GestionDeStock.Controles
         // funiconalidad del botón editar
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            var editarCategoria = new EditarCategoria();
             ContextMenuStrip menu = new ContextMenuStrip();
             menu.Font = new Font(menu.Font.FontFamily, 11);
-            menu.Items.Add("Categorías", null, (s, ev) => MessageBox.Show("Elegiste opción 1"));
+            menu.Items.Add("Categorías", null, (s, ev) => { editarCategoria.ShowDialog(); consultar(""); });
             menu.Items.Add("Subcategorías", null, (s, ev) => MessageBox.Show("Elegiste opción 2"));
             menu.Items.Add("Artículos", null, (s, ev) => MessageBox.Show("Elegiste opción 2"));
             menu.Items.Add("Marcas", null, (s, ev) => MessageBox.Show("Elegiste opción 2"));
