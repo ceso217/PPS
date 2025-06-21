@@ -13,13 +13,13 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GestionDeStock.Formularios
 {
-    public partial class FormNuevaSubcategoria : Form
+    public partial class NuevaSubcategoria : Form
     {
-        public Subcategoria NuevaSubcategoria { get; private set; }
+        public Subcategoria SubcategoriaCreada { get; private set; }
         public Categoria CategoriaPerteneciente { get; private set; }
         private int CategoriaSeleccionada { get; set; }
 
-        public FormNuevaSubcategoria(int categoriaId)
+        public NuevaSubcategoria(int categoriaId)
         {
             InitializeComponent();
             CategoriaSeleccionada = categoriaId;
@@ -78,14 +78,14 @@ namespace GestionDeStock.Formularios
 
                     if (!existe)
                     {
-                        NuevaSubcategoria = new Subcategoria
+                        SubcategoriaCreada = new Subcategoria
                         {
                             CategoriaId = CategoriaPerteneciente.CategoriaId,
                             Nombre = textBoxNuevaSubcategoria.Text,
                             CodigoSubcategoria = subcategorias.Count == 0 ? 1 : subcategorias.Last().CodigoSubcategoria + 1
                         };
 
-                        context.Subcategorias.Add(NuevaSubcategoria);
+                        context.Subcategorias.Add(SubcategoriaCreada);
                         context.SaveChanges();
                         DialogResult = DialogResult.OK;
                         this.Close();

@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace GestionDeStock
 {
-    public partial class FormNuevoArtículo : Form
+    public partial class NuevoArtículo : Form
     {
-        public FormNuevoArtículo()
+        public NuevoArtículo()
         {
             InitializeComponent();
             Iniciar();
@@ -82,13 +82,13 @@ namespace GestionDeStock
                 {
                     int idCategoriaSeleccionada = (int)comboBoxCategoria.SelectedValue;
 
-                    var popup = new FormNuevaSubcategoria(idCategoriaSeleccionada);
+                    var popup = new NuevaSubcategoria(idCategoriaSeleccionada);
 
                     var resultado = popup.ShowDialog();
 
                     if (resultado == DialogResult.OK)
                     {
-                        Subcategoria nueva = popup.NuevaSubcategoria;
+                        Subcategoria nueva = popup.SubcategoriaCreada;
                         Categoria seleccionada = popup.CategoriaPerteneciente;
 
                         using (var context = new StockBDContext())
@@ -164,7 +164,7 @@ namespace GestionDeStock
 
         private void btnCrearCategoria_Click(object sender, EventArgs e)
         {
-            var popup = new FormNuevaCategoria();
+            var popup = new NuevaCategoria();
 
             var resultado = popup.ShowDialog();
 
@@ -182,7 +182,7 @@ namespace GestionDeStock
                     comboBoxCategoria.DisplayMember = "Nombre";
                     comboBoxCategoria.ValueMember = "CategoriaId";
 
-                    Categoria nueva = popup.NuevaCategoria;
+                    Categoria nueva = popup.CategoriaCreada;
                     comboBoxCategoria.SelectedIndex = nueva.CategoriaId;
                 }
             }
@@ -190,7 +190,7 @@ namespace GestionDeStock
 
         private void btnCrearUM_Click(object sender, EventArgs e)
         {
-            var popup = new FormNuevaUnidadDeMedida();
+            var popup = new NuevaUnidadDeMedida();
             var resultado = popup.ShowDialog();
 
             if (resultado == DialogResult.OK)
@@ -215,7 +215,7 @@ namespace GestionDeStock
 
         private void btnCrearMarca_Click(object sender, EventArgs e)
         {
-            var popup = new FormNuevaMarca();
+            var popup = new NuevaMarca();
             var resultado = popup.ShowDialog();
 
             if (resultado == DialogResult.OK)
@@ -233,7 +233,7 @@ namespace GestionDeStock
                     comboBoxMarca.DisplayMember = "Nombre";
                     comboBoxMarca.ValueMember = "Id";
 
-                    comboBoxMarca.SelectedValue = popup.NuevaMarca.Id;
+                    comboBoxMarca.SelectedValue = popup.MarcaCreada.Id;
                 }
             }
         }

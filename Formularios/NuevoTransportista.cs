@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace GestionDeStock.Formularios
 {
-    public partial class FormNuevoDeposito : Form
+    public partial class NuevoTransportista : Form
     {
-        public Deposito NuevoDeposito { get; private set; }
-        public FormNuevoDeposito()
+        public Transportista TransportistaCreado { get; private set; }
+        public NuevoTransportista()
         {
             InitializeComponent();
         }
@@ -25,37 +25,37 @@ namespace GestionDeStock.Formularios
             this.Close();
         }
 
-        private void btnCrearDeposito_Click(object sender, EventArgs e)
+        private void btnCrearTransportista_Click(object sender, EventArgs e)
         {
             using (var context = new StockBDContext())
             {
 
-                var depositos = context.Proveedores.ToList();
+                var transportistas = context.Transportistas.ToList();
 
                 bool existe = false;
 
-                foreach (var d in depositos)
+                foreach (var t in transportistas)
                 {
-                    if (d.Nombre.ToLower() == textBoxNuevoDeposito.Text.ToLower())
+                    if (t.Nombre.ToLower() == textBoxNuevoTransportista.Text.ToLower())
                     {
-                        MessageBox.Show("El depósito \"" + textBoxNuevoDeposito.Text + "\" ya existe.", "Depósito existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("El transportista \"" + textBoxNuevoTransportista.Text + "\" ya existe.", "Transportista existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         existe = true;
                         break;
                     }
                 }
 
-                if (string.IsNullOrWhiteSpace(textBoxNuevoDeposito.Text))
+                if (string.IsNullOrWhiteSpace(textBoxNuevoTransportista.Text))
                 {
-                    MessageBox.Show("El campo \"Nombre del nuevo depósito\" esta incompleto.", "Campo incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("El campo \"Nombre del nuevo transportista\" esta incompleto.", "Campo incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else if (!existe)
                 {
-                    NuevoDeposito = new Deposito()
+                    TransportistaCreado = new Transportista()
                     {
-                        Nombre = textBoxNuevoDeposito.Text
+                        Nombre = textBoxNuevoTransportista.Text
                     };
 
-                    context.Depositos.Add(NuevoDeposito);
+                    context.Transportistas.Add(TransportistaCreado);
                     context.SaveChanges();
 
                     DialogResult = DialogResult.OK;
@@ -64,14 +64,15 @@ namespace GestionDeStock.Formularios
             }
         }
 
-        private void textBoxNuevaDeposito_KeyDown(object sender, KeyEventArgs e)
+        private void textBoxNuevaTransportista_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnCrearDeposito.PerformClick();
+                btnCrearTransportista.PerformClick();
                 e.Handled = true;
                 e.SuppressKeyPress = true;
             }
         }
     }
 }
+

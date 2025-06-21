@@ -1,6 +1,6 @@
 ﻿namespace GestionDeStock.Formularios
 {
-    partial class FormSeleccionarArticulo
+    partial class SeleccionarArticulo
     {
         /// <summary>
         /// Required designer variable.

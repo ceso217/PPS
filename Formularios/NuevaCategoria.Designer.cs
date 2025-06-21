@@ -1,6 +1,6 @@
 ﻿namespace GestionDeStock.Formularios
 {
-    partial class FormNuevaCategoria
+    partial class NuevaCategoria
     {
         /// <summary>
         /// Required designer variable.

@@ -167,7 +167,7 @@ namespace GestionDeStock.Controles
         //apertura de modal para crear artículo y actualización de registros
         private void btnAgregarArt_Click(object sender, EventArgs e)
         {
-            var popup = new FormNuevoArtículo();
+            var popup = new NuevoArtículo();
             popup.ShowDialog();
             consultar("");
         }
@@ -218,13 +218,15 @@ namespace GestionDeStock.Controles
         private void btnEditar_Click(object sender, EventArgs e)
         {
             var editarCategoria = new EditarCategoria();
+            var editarMarca = new EditarMarca();
+            var editarUM = new EditarUM();
             ContextMenuStrip menu = new ContextMenuStrip();
             menu.Font = new Font(menu.Font.FontFamily, 11);
             menu.Items.Add("Categorías", null, (s, ev) => { editarCategoria.ShowDialog(); consultar(""); });
-            menu.Items.Add("Subcategorías", null, (s, ev) => MessageBox.Show("Elegiste opción 2"));
+            menu.Items.Add("Subcategorías", null, (s, ev) => { editarMarca.ShowDialog(); consultar(""); });
             menu.Items.Add("Artículos", null, (s, ev) => MessageBox.Show("Elegiste opción 2"));
-            menu.Items.Add("Marcas", null, (s, ev) => MessageBox.Show("Elegiste opción 2"));
-            menu.Items.Add("Unidades de medida", null, (s, ev) => MessageBox.Show("Elegiste opción 2"));
+            menu.Items.Add("Marcas", null, (s, ev) => { editarMarca.ShowDialog(); consultar(""); });
+            menu.Items.Add("Unidades de medida", null, (s, ev) => { editarUM.ShowDialog(); consultar(""); });
 
             menu.Show(btnEditar, new Point(0, btnEditar.Height));
         }

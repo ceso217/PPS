@@ -14,13 +14,13 @@ using System.Windows.Forms;
 
 namespace GestionDeStock.Formularios
 {
-    public partial class FormSeleccionarArticulo : Form
+    public partial class SeleccionarArticulo : Form
     {
         DataTable tabla;
         private System.Windows.Forms.Timer timerBusqueda;
         public int ArticuloSeleccionadoId { get; private set; }
 
-        public FormSeleccionarArticulo()
+        public SeleccionarArticulo()
         {
             InitializeComponent();
             Iniciar();

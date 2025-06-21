@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace GestionDeStock.Formularios
 {
-    public partial class FormNuevoProveedor : Form
+    public partial class NuevoDeposito : Form
     {
-        public Proveedor NuevoProveedor { get; private set; }
-        public FormNuevoProveedor()
+        public Deposito DepositoCreado { get; private set; }
+        public NuevoDeposito()
         {
             InitializeComponent();
         }
@@ -25,37 +25,37 @@ namespace GestionDeStock.Formularios
             this.Close();
         }
 
-        private void btnCrearProveedor_Click(object sender, EventArgs e)
+        private void btnCrearDeposito_Click(object sender, EventArgs e)
         {
             using (var context = new StockBDContext())
             {
 
-                var proveedores = context.Proveedores.ToList();
+                var depositos = context.Proveedores.ToList();
 
                 bool existe = false;
 
-                foreach (var p in proveedores)
+                foreach (var d in depositos)
                 {
-                    if (p.Nombre.ToLower() == textBoxNuevoProveedor.Text.ToLower())
+                    if (d.Nombre.ToLower() == textBoxNuevoDeposito.Text.ToLower())
                     {
-                        MessageBox.Show("El proveedor \"" + textBoxNuevoProveedor.Text + "\" ya existe.", "Proveedor existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("El depósito \"" + textBoxNuevoDeposito.Text + "\" ya existe.", "Depósito existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         existe = true;
                         break;
                     }
                 }
 
-                if (string.IsNullOrWhiteSpace(textBoxNuevoProveedor.Text))
+                if (string.IsNullOrWhiteSpace(textBoxNuevoDeposito.Text))
                 {
-                    MessageBox.Show("El campo \"Nombre del nuevo proveedor\" esta incompleto.", "Campo incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("El campo \"Nombre del nuevo depósito\" esta incompleto.", "Campo incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else if (!existe)
                 {
-                    NuevoProveedor = new Proveedor()
+                    DepositoCreado = new Deposito()
                     {
-                        Nombre = textBoxNuevoProveedor.Text
+                        Nombre = textBoxNuevoDeposito.Text
                     };
 
-                    context.Proveedores.Add(NuevoProveedor);
+                    context.Depositos.Add(DepositoCreado);
                     context.SaveChanges();
 
                     DialogResult = DialogResult.OK;
@@ -64,11 +64,11 @@ namespace GestionDeStock.Formularios
             }
         }
 
-        private void textBoxNuevaProveedor_KeyDown(object sender, KeyEventArgs e)
+        private void textBoxNuevaDeposito_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnCrearProveedor.PerformClick();
+                btnCrearDeposito.PerformClick();
                 e.Handled = true;
                 e.SuppressKeyPress = true;
             }

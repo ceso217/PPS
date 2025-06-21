@@ -1,6 +1,6 @@
 ﻿namespace GestionDeStock.Formularios
 {
-    partial class FormNuevaUnidadDeMedida
+    partial class NuevaUnidadDeMedida
     {
         /// <summary>
         /// Required designer variable.

@@ -1,6 +1,6 @@
 ﻿namespace GestionDeStock.Formularios
 {
-    partial class FormNuevoProveedor
+    partial class NuevoDeposito
     {
         /// <summary>
         /// Required designer variable.
@@ -28,32 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBoxNuevoProveedor = new TextBox();
-            btnCrearProveedor = new Button();
+            textBoxNuevoDeposito = new TextBox();
+            btnCrearDeposito = new Button();
             label1 = new Label();
             label2 = new Label();
             btnCancelar = new Button();
             SuspendLayout();
             // 
-            // textBoxNuevoProveedor
+            // textBoxNuevoDeposito
             // 
-            textBoxNuevoProveedor.Font = new Font("Segoe UI", 11.25F);
-            textBoxNuevoProveedor.Location = new Point(274, 96);
-            textBoxNuevoProveedor.Name = "textBoxNuevoProveedor";
-            textBoxNuevoProveedor.Size = new Size(219, 27);
-            textBoxNuevoProveedor.TabIndex = 0;
-            textBoxNuevoProveedor.KeyDown += textBoxNuevaProveedor_KeyDown;
+            textBoxNuevoDeposito.Font = new Font("Segoe UI", 11.25F);
+            textBoxNuevoDeposito.Location = new Point(250, 96);
+            textBoxNuevoDeposito.Name = "textBoxNuevoDeposito";
+            textBoxNuevoDeposito.Size = new Size(219, 27);
+            textBoxNuevoDeposito.TabIndex = 0;
+            textBoxNuevoDeposito.KeyDown += textBoxNuevaDeposito_KeyDown;
             // 
-            // btnCrearProveedor
+            // btnCrearDeposito
             // 
-            btnCrearProveedor.Font = new Font("Segoe UI", 11.25F);
-            btnCrearProveedor.Location = new Point(143, 174);
-            btnCrearProveedor.Name = "btnCrearProveedor";
-            btnCrearProveedor.Size = new Size(95, 35);
-            btnCrearProveedor.TabIndex = 1;
-            btnCrearProveedor.Text = "Crear";
-            btnCrearProveedor.UseVisualStyleBackColor = true;
-            btnCrearProveedor.Click += btnCrearProveedor_Click;
+            btnCrearDeposito.Font = new Font("Segoe UI", 11.25F);
+            btnCrearDeposito.Location = new Point(143, 174);
+            btnCrearDeposito.Name = "btnCrearDeposito";
+            btnCrearDeposito.Size = new Size(95, 35);
+            btnCrearDeposito.TabIndex = 1;
+            btnCrearDeposito.Text = "Crear";
+            btnCrearDeposito.UseVisualStyleBackColor = true;
+            btnCrearDeposito.Click += btnCrearDeposito_Click;
             // 
             // label1
             // 
@@ -61,19 +61,19 @@
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Underline, GraphicsUnit.Point, 0);
             label1.Location = new Point(31, 22);
             label1.Name = "label1";
-            label1.Size = new Size(159, 25);
+            label1.Size = new Size(147, 25);
             label1.TabIndex = 2;
-            label1.Text = "Nuevo Proveedor";
+            label1.Text = "Nuevo Depósito";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11.25F);
-            label2.Location = new Point(46, 99);
+            label2.Location = new Point(45, 99);
             label2.Name = "label2";
-            label2.Size = new Size(209, 20);
+            label2.Size = new Size(199, 20);
             label2.TabIndex = 3;
-            label2.Text = "Nombre del nuevo proveedor:";
+            label2.Text = "Nombre del nuevo depósito:";
             // 
             // btnCancelar
             // 
@@ -86,7 +86,7 @@
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
             // 
-            // FormNuevoProveedor
+            // FormNuevoDeposito
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -94,21 +94,21 @@
             Controls.Add(btnCancelar);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(btnCrearProveedor);
-            Controls.Add(textBoxNuevoProveedor);
+            Controls.Add(btnCrearDeposito);
+            Controls.Add(textBoxNuevoDeposito);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
-            Name = "FormNuevoProveedor";
+            Name = "FormNuevoDeposito";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Crear nuevo proveedor";
+            Text = "Crear nuevo depósito";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox textBoxNuevoProveedor;
-        private Button btnCrearProveedor;
+        private TextBox textBoxNuevoDeposito;
+        private Button btnCrearDeposito;
         private Label label1;
         private Label label2;
         private Button btnCancelar;

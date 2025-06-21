@@ -92,7 +92,7 @@ namespace GestionDeStock.Controles
 
         private void btnNuevoIngreso_Click(object sender, EventArgs e)
         {
-            var popup = new FormNuevoMovimiento(TipoMovimiento.Ingreso);
+            var popup = new NuevoMovimiento(TipoMovimiento.Ingreso);
             popup.ShowDialog();
             consultar();
         }

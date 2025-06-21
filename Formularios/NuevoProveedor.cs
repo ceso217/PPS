@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace GestionDeStock.Formularios
 {
-    public partial class FormNuevoTransportista : Form
+    public partial class NuevoProveedor : Form
     {
-        public Transportista NuevoTransportista { get; private set; }
-        public FormNuevoTransportista()
+        public Proveedor ProveedorCreado { get; private set; }
+        public NuevoProveedor()
         {
             InitializeComponent();
         }
@@ -25,37 +25,37 @@ namespace GestionDeStock.Formularios
             this.Close();
         }
 
-        private void btnCrearTransportista_Click(object sender, EventArgs e)
+        private void btnCrearProveedor_Click(object sender, EventArgs e)
         {
             using (var context = new StockBDContext())
             {
 
-                var transportistas = context.Transportistas.ToList();
+                var proveedores = context.Proveedores.ToList();
 
                 bool existe = false;
 
-                foreach (var t in transportistas)
+                foreach (var p in proveedores)
                 {
-                    if (t.Nombre.ToLower() == textBoxNuevoTransportista.Text.ToLower())
+                    if (p.Nombre.ToLower() == textBoxNuevoProveedor.Text.ToLower())
                     {
-                        MessageBox.Show("El transportista \"" + textBoxNuevoTransportista.Text + "\" ya existe.", "Transportista existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("El proveedor \"" + textBoxNuevoProveedor.Text + "\" ya existe.", "Proveedor existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         existe = true;
                         break;
                     }
                 }
 
-                if (string.IsNullOrWhiteSpace(textBoxNuevoTransportista.Text))
+                if (string.IsNullOrWhiteSpace(textBoxNuevoProveedor.Text))
                 {
-                    MessageBox.Show("El campo \"Nombre del nuevo transportista\" esta incompleto.", "Campo incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("El campo \"Nombre del nuevo proveedor\" esta incompleto.", "Campo incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else if (!existe)
                 {
-                    NuevoTransportista = new Transportista()
+                    ProveedorCreado = new Proveedor()
                     {
-                        Nombre = textBoxNuevoTransportista.Text
+                        Nombre = textBoxNuevoProveedor.Text
                     };
 
-                    context.Transportistas.Add(NuevoTransportista);
+                    context.Proveedores.Add(ProveedorCreado);
                     context.SaveChanges();
 
                     DialogResult = DialogResult.OK;
@@ -64,15 +64,14 @@ namespace GestionDeStock.Formularios
             }
         }
 
-        private void textBoxNuevaTransportista_KeyDown(object sender, KeyEventArgs e)
+        private void textBoxNuevaProveedor_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnCrearTransportista.PerformClick();
+                btnCrearProveedor.PerformClick();
                 e.Handled = true;
                 e.SuppressKeyPress = true;
             }
         }
     }
 }
-

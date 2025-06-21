@@ -1,6 +1,6 @@
 ﻿namespace GestionDeStock
 {
-    partial class FormNuevoArtículo
+    partial class NuevoArtículo
     {
         /// <summary>
         /// Required designer variable.

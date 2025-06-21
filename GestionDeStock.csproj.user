@@ -13,37 +13,46 @@
     <Compile Update="Formularios\EditarCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Formularios\FormNuevaCategoria.cs">
+    <Compile Update="Formularios\EditarMarca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Formularios\FormNuevaMarca.cs">
+    <Compile Update="Formularios\EditarSubcategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Formularios\FormNuevaSubcategoria.cs">
+    <Compile Update="Formularios\EditarUM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Formularios\FormNuevaUnidadDeMedida.cs">
+    <Compile Update="Formularios\NuevaCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Formularios\FormNuevoDeposito.cs">
+    <Compile Update="Formularios\NuevaMarca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Formularios\FormNuevoMovimiento.cs">
+    <Compile Update="Formularios\NuevaSubcategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Formularios\FormNuevoProveedor.cs">
+    <Compile Update="Formularios\NuevaUnidadDeMedida.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Formularios\FormNuevoTransportista.cs">
+    <Compile Update="Formularios\NuevoDeposito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\NuevoMovimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\NuevoProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\NuevoTransportista.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Formularios\FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Formularios\FormNuevoArtículo.cs">
+    <Compile Update="Formularios\NuevoArtículo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Formularios\FormSeleccionarArticulo.cs">
+    <Compile Update="Formularios\SeleccionarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

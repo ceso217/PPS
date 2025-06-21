@@ -3,10 +3,10 @@ using GestionDeStock.Models;
 
 namespace GestionDeStock.Formularios
 {
-    public partial class FormNuevaCategoria : Form
+    public partial class NuevaCategoria : Form
     {
-        public Categoria NuevaCategoria { get; private set; }
-        public FormNuevaCategoria()
+        public Categoria CategoriaCreada { get; private set; }
+        public NuevaCategoria()
         {
             InitializeComponent();
         }
@@ -41,13 +41,13 @@ namespace GestionDeStock.Formularios
                 }
                 else if (!existe)
                 {
-                    NuevaCategoria = new Categoria
+                    CategoriaCreada = new Categoria
                     {
                         Nombre = textBoxNuevaCategoria.Text,
                         CategoriaId = categorias.Count == 0 ? 1 : categorias.Last().CategoriaId + 1
                     };
 
-                    context.Categorias.Add(NuevaCategoria);
+                    context.Categorias.Add(CategoriaCreada);
                     context.SaveChanges();
 
                     DialogResult = DialogResult.OK;

@@ -14,11 +14,11 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace GestionDeStock.Formularios
 {
-    public partial class FormNuevoMovimiento : Form
+    public partial class NuevoMovimiento : Form
     {
         DataTable tabla;
         TipoMovimiento tipoMovimiento;
-        public FormNuevoMovimiento(TipoMovimiento tipo)
+        public NuevoMovimiento(TipoMovimiento tipo)
         {
             InitializeComponent();
             tipoMovimiento = tipo;
@@ -138,7 +138,7 @@ namespace GestionDeStock.Formularios
         {
             tabla.Rows.Clear();
 
-            var popup = new FormSeleccionarArticulo();
+            var popup = new SeleccionarArticulo();
             var resultados = popup.ShowDialog();
 
             if (resultados == DialogResult.OK)
@@ -178,7 +178,7 @@ namespace GestionDeStock.Formularios
 
         private void btnNuevoDestino_Click(object sender, EventArgs e)
         {
-            var popup = new FormNuevoDeposito();
+            var popup = new NuevoDeposito();
             var resultado = popup.ShowDialog();
 
             if (resultado == DialogResult.OK)
@@ -197,7 +197,7 @@ namespace GestionDeStock.Formularios
                     comboBoxDestino.ValueMember = "Id";
                     comboBoxDestino.DisplayMember = "Nombre";
 
-                    Deposito nuevo = popup.NuevoDeposito;
+                    Deposito nuevo = popup.DepositoCreado;
                     comboBoxDestino.SelectedIndex = nuevo.Id;
                 }
             }
@@ -205,7 +205,7 @@ namespace GestionDeStock.Formularios
 
         private void btnNuevoTransp_Click(object sender, EventArgs e)
         {
-            var popup = new FormNuevoTransportista();
+            var popup = new NuevoTransportista();
             var resultado = popup.ShowDialog();
 
             if (resultado == DialogResult.OK)
@@ -222,14 +222,14 @@ namespace GestionDeStock.Formularios
                     });
                     comboBoxTransportista.DataSource = transportistas;
 
-                    Transportista nuevo = popup.NuevoTransportista;
+                    Transportista nuevo = popup.TransportistaCreado;
                     comboBoxTransportista.SelectedIndex = nuevo.Id;
                 }
             }
         }
         private void btnNuevoProveedor_Click(object sender, EventArgs e)
         {
-            var popup = new FormNuevoProveedor();
+            var popup = new NuevoProveedor();
             var resultado = popup.ShowDialog();
 
             if (resultado == DialogResult.OK)
@@ -248,7 +248,7 @@ namespace GestionDeStock.Formularios
                     comboBoxProveedor.ValueMember = "Id";
                     comboBoxProveedor.DisplayMember = "Nombre";
 
-                    Proveedor nuevo = popup.NuevoProveedor;
+                    Proveedor nuevo = popup.ProveedorCreado;
                     comboBoxProveedor.SelectedIndex = nuevo.Id;
                 }
             }

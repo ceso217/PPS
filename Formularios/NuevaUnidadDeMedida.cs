@@ -1,5 +1,6 @@
 ﻿using GestionDeStock.DBContext;
 using GestionDeStock.Models;
+using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,14 +10,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GestionDeStock.Formularios
 {
-    public partial class FormNuevaMarca : Form
+    public partial class NuevaUnidadDeMedida : Form
     {
-        public Marca NuevaMarca { get; private set; }
-        public FormNuevaMarca()
+        public UnidadMedida NuevaUM { get; private set; }
+        public NuevaUnidadDeMedida()
         {
             InitializeComponent();
         }
@@ -30,16 +30,17 @@ namespace GestionDeStock.Formularios
         {
             using (var context = new StockBDContext())
             {
-                var marcas = context.Marcas.ToList();
+
+                var ums = context.UnidadesDeMedida.ToList();
 
                 bool existe = false;
 
-                foreach (Marca m in marcas)
+                foreach (UnidadMedida um in ums)
                 {
 
-                    if (m.Nombre == textBox1.Text)
+                    if (um.Nombre == textBox1.Text)
                     {
-                        MessageBox.Show("La marca \"" + textBox1.Text + "\" ya existe.", "Marca existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("La unidad de medida \"" + textBox1.Text + "\" ya existe.", "Unidad de medida existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         existe = true;
                         break;
                     }
@@ -47,16 +48,16 @@ namespace GestionDeStock.Formularios
 
                 if (string.IsNullOrWhiteSpace(textBox1.Text))
                 {
-                    MessageBox.Show("El campo \"Nombre de la nueva marca\" esta incompleto.", "Campo incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("El campo \"Nombre de la nueva unidad de medida\" esta incompleto.", "Campo incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else if (!existe)
                 {
-                    NuevaMarca = new Marca()
+                    NuevaUM = new UnidadMedida()
                     {
                         Nombre = textBox1.Text
                     };
 
-                    context.Marcas.Add(NuevaMarca);
+                    context.UnidadesDeMedida.Add(NuevaUM);
                     context.SaveChanges();
                     DialogResult = DialogResult.OK;
                     this.Close();
