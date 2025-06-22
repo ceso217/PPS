@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GestionDeStock")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3108d239724b65ece2541ffcd08a96a66a3dc50f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+425d797d3491403c51e1c1a61d892adb4e1d6a45")]
 [assembly: System.Reflection.AssemblyProductAttribute("GestionDeStock")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GestionDeStock")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

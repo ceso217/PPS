@@ -220,10 +220,11 @@ namespace GestionDeStock.Controles
             var editarCategoria = new EditarCategoria();
             var editarMarca = new EditarMarca();
             var editarUM = new EditarUM();
+            var editarSubcategoria = new EditarSubcategoria();
             ContextMenuStrip menu = new ContextMenuStrip();
             menu.Font = new Font(menu.Font.FontFamily, 11);
             menu.Items.Add("Categorías", null, (s, ev) => { editarCategoria.ShowDialog(); consultar(""); });
-            menu.Items.Add("Subcategorías", null, (s, ev) => { editarMarca.ShowDialog(); consultar(""); });
+            menu.Items.Add("Subcategorías", null, (s, ev) => { editarSubcategoria.ShowDialog(); consultar(""); });
             menu.Items.Add("Artículos", null, (s, ev) => MessageBox.Show("Elegiste opción 2"));
             menu.Items.Add("Marcas", null, (s, ev) => { editarMarca.ShowDialog(); consultar(""); });
             menu.Items.Add("Unidades de medida", null, (s, ev) => { editarUM.ShowDialog(); consultar(""); });

@@ -459,3 +459,4 @@ C:\Users\baron\Desktop\PPS\PPS\obj\Debug\net8.0-windows\GestionDeStock.Formulari
 C:\Users\baron\Desktop\PPS\PPS\obj\Debug\net8.0-windows\GestionDeStock.Formularios.NuevoTransportista.resources
 C:\Users\baron\Desktop\PPS\PPS\obj\Debug\net8.0-windows\GestionDeStock.Formularios.SeleccionarArticulo.resources
 C:\Users\baron\Desktop\PPS\PPS\obj\Debug\net8.0-windows\GestionDeStock.Formularios.EditarUM.resources
+C:\Users\baron\Desktop\PPS\PPS\obj\Debug\net8.0-windows\GestionDeStock.Formularios.EditarSubcategoria.resources
