@@ -30,5 +30,10 @@ namespace GestionDeStock
         {
             MostrarUC(new ucSalida());
         }
+
+        private void btnMovimientos_Click(object sender, EventArgs e)
+        {
+            MostrarUC(new ucMovimientos());
+        }
     }
 }

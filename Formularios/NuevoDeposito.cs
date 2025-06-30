@@ -30,7 +30,7 @@ namespace GestionDeStock.Formularios
             using (var context = new StockBDContext())
             {
 
-                var depositos = context.Proveedores.ToList();
+                var depositos = context.Depositos.ToList();
 
                 bool existe = false;
 

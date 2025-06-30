@@ -37,27 +37,32 @@ namespace GestionDeStock.DBContext
             modelBuilder.Entity<Articulo>()
                 .HasOne(a => a.Marca)
                 .WithMany(m => m.Articulos)
-                .HasForeignKey(a => a.MarcaId);
+                .HasForeignKey(a => a.MarcaId)
+                .OnDelete(DeleteBehavior.SetNull);
 
             modelBuilder.Entity<Articulo>()
                 .HasOne(a => a.UnidadMedida)
                 .WithMany(u => u.Articulos)
-                .HasForeignKey(a => a.UnidadMedidaId);
+                .HasForeignKey(a => a.UnidadMedidaId)
+                .OnDelete(DeleteBehavior.SetNull);
 
             modelBuilder.Entity<Movimiento>()
                 .HasOne(i => i.Proveedor)
                 .WithMany(p => p.Movimientos)
-                .HasForeignKey(i => i.ProveedorId);
+                .HasForeignKey(i => i.ProveedorId)
+                .OnDelete(DeleteBehavior.SetNull);
 
             modelBuilder.Entity<Movimiento>()
                 .HasOne(m => m.Deposito)
                 .WithMany(d => d.Movimientos)
-                .HasForeignKey(m => m.DepositoId);
+                .HasForeignKey(m => m.DepositoId)
+                .OnDelete(DeleteBehavior.SetNull);
 
             modelBuilder.Entity<Movimiento>()
                 .HasOne(i => i.Transportista)
                 .WithMany(t => t.Movimientos)
-                .HasForeignKey(i => i.TransportistaId);
+                .HasForeignKey(i => i.TransportistaId)
+                .OnDelete(DeleteBehavior.SetNull);
 
             modelBuilder.Entity<Movimiento>()
                 .HasOne(i => i.Articulo)

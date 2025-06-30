@@ -1,6 +1,6 @@
 ﻿namespace GestionDeStock.Formularios
 {
-    partial class SeleccionarArticulo
+    partial class SeleccionarRegistro
     {
         /// <summary>
         /// Required designer variable.
@@ -33,6 +33,7 @@
             grilla = new DataGridView();
             textBoxBusqueda = new TextBox();
             labelFiltros = new Label();
+            comboBoxDeposito = new ComboBox();
             comboBoxCategoria = new ComboBox();
             comboBoxSubcategoria = new ComboBox();
             btnLimpiar = new Button();
@@ -92,12 +93,22 @@
             labelFiltros.TabIndex = 4;
             labelFiltros.Text = "Filtros:";
             // 
+            // comboBoxDeposito
+            // 
+            comboBoxDeposito.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxDeposito.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBoxDeposito.FormattingEnabled = true;
+            comboBoxDeposito.Location = new Point(903, 7);
+            comboBoxDeposito.Name = "comboBoxDeposito";
+            comboBoxDeposito.Size = new Size(208, 28);
+            comboBoxDeposito.TabIndex = 7;
+            // 
             // comboBoxCategoria
             // 
             comboBoxCategoria.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxCategoria.Font = new Font("Segoe UI", 11.25F);
             comboBoxCategoria.FormattingEnabled = true;
-            comboBoxCategoria.Location = new Point(72, 8);
+            comboBoxCategoria.Location = new Point(72, 7);
             comboBoxCategoria.Name = "comboBoxCategoria";
             comboBoxCategoria.Size = new Size(232, 28);
             comboBoxCategoria.TabIndex = 5;
@@ -145,7 +156,7 @@
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
             // 
-            // FormSeleccionarArticulo
+            // SeleccionarArticulo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -153,12 +164,13 @@
             Controls.Add(btnCancelar);
             Controls.Add(btnSeleccionar);
             Controls.Add(btnLimpiar);
+            Controls.Add(comboBoxDeposito);
             Controls.Add(comboBoxSubcategoria);
             Controls.Add(comboBoxCategoria);
             Controls.Add(labelFiltros);
             Controls.Add(textBoxBusqueda);
             Controls.Add(grilla);
-            Name = "FormSeleccionarArticulo";
+            Name = "SeleccionarArticulo";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Selección de artículo";
@@ -174,6 +186,7 @@
         private Label labelFiltros;
         private ComboBox comboBoxCategoria;
         private ComboBox comboBoxSubcategoria;
+        private ComboBox comboBoxDeposito;
         private Button btnLimpiar;
         private Button btnSeleccionar;
         private Button btnCancelar;

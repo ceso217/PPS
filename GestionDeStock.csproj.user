@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="Controles\ucMovimientos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Controles\ucIngreso.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -10,16 +13,37 @@
     <Compile Update="Controles\ucSalida.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Formularios\EditarArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Formularios\EditarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\EditarDeposito.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Formularios\EditarMarca.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Formularios\EditarMovimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\EditarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Formularios\EditarSubcategoria.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Formularios\EditarTransp.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Formularios\EditarUM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Eliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\EliminarSeleccionar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Formularios\NuevaCategoria.cs">
@@ -52,7 +76,7 @@
     <Compile Update="Formularios\NuevoArtículo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Formularios\SeleccionarArticulo.cs">
+    <Compile Update="Formularios\SeleccionarRegistro.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

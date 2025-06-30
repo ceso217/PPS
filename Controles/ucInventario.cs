@@ -4,6 +4,9 @@ using GestionDeStock.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Data;
+using System.Runtime.CompilerServices;
+using System.Windows.Forms;
+using static GestionDeStock.Formularios.SeleccionarRegistro;
 
 namespace GestionDeStock.Controles
 {
@@ -32,6 +35,12 @@ namespace GestionDeStock.Controles
             tabla.Columns.Add("Stock");
 
             grilla.DataSource = tabla;
+            foreach (DataGridViewColumn col in grilla.Columns)
+            {
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+            //grilla.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray; 
+
 
             timerBusqueda = new System.Windows.Forms.Timer();
             timerBusqueda.Interval = 500;
@@ -68,7 +77,7 @@ namespace GestionDeStock.Controles
                 // invocación del método de actualización de subcategorías según la categoría seleccionada
                 comboBoxCategoria.SelectedIndexChanged += (s, e) =>
                 {
-                    actualizarSubcategorias(subcategorias, placeholder);
+                    actualizarSubcategorias(subcategorias, placeholder, comboBoxCategoria, comboBoxSubcategoria);
                     consultar(textBoxBusqueda.Text);
                 };
                 comboBoxSubcategoria.SelectedIndexChanged += (s, e) =>
@@ -79,9 +88,9 @@ namespace GestionDeStock.Controles
         }
 
         // método de actualización de subcategorías según la categoría seleccionada
-        private void actualizarSubcategorias(List<Subcategoria> subcategorias, List<Subcategoria> placeholder)
+        public void actualizarSubcategorias(List<Subcategoria> subcategorias, List<Subcategoria> placeholder, ComboBox comboCate, ComboBox comboSubcate)
         {
-            var categoriaId = (int)comboBoxCategoria.SelectedValue;
+            var categoriaId = (int)comboCate.SelectedValue;
 
             var subcategoriasSeleccionadas = subcategorias
                 .Where(s => s.CategoriaId == categoriaId)
@@ -89,9 +98,9 @@ namespace GestionDeStock.Controles
 
             if (categoriaId == 0)
             {
-                comboBoxSubcategoria.DataSource = placeholder;
-                comboBoxSubcategoria.DisplayMember = "Nombre";
-                comboBoxSubcategoria.ValueMember = "Id";
+                comboSubcate.DataSource = placeholder;
+                comboSubcate.DisplayMember = "Nombre";
+                comboSubcate.ValueMember = "Id";
             }
             else
             {
@@ -101,9 +110,9 @@ namespace GestionDeStock.Controles
                     Nombre = "Todas las subcategorías"
                 });
 
-                comboBoxSubcategoria.DataSource = subcategoriasSeleccionadas;
-                comboBoxSubcategoria.DisplayMember = "Nombre";
-                comboBoxSubcategoria.ValueMember = "Id";
+                comboSubcate.DataSource = subcategoriasSeleccionadas;
+                comboSubcate.DisplayMember = "Nombre";
+                comboSubcate.ValueMember = "Id";
             }
         }
 
@@ -220,16 +229,87 @@ namespace GestionDeStock.Controles
             var editarCategoria = new EditarCategoria();
             var editarMarca = new EditarMarca();
             var editarUM = new EditarUM();
+            var editarArticulo = new EditarArticulo();
             var editarSubcategoria = new EditarSubcategoria();
             ContextMenuStrip menu = new ContextMenuStrip();
             menu.Font = new Font(menu.Font.FontFamily, 11);
+            menu.Items.Add("Artículos", null, (s, ev) => { editarArticulo.ShowDialog(); consultar(""); });
             menu.Items.Add("Categorías", null, (s, ev) => { editarCategoria.ShowDialog(); consultar(""); });
-            menu.Items.Add("Subcategorías", null, (s, ev) => { editarSubcategoria.ShowDialog(); consultar(""); });
-            menu.Items.Add("Artículos", null, (s, ev) => MessageBox.Show("Elegiste opción 2"));
             menu.Items.Add("Marcas", null, (s, ev) => { editarMarca.ShowDialog(); consultar(""); });
+            menu.Items.Add("Subcategorías", null, (s, ev) => { editarSubcategoria.ShowDialog(); consultar(""); });
             menu.Items.Add("Unidades de medida", null, (s, ev) => { editarUM.ShowDialog(); consultar(""); });
 
             menu.Show(btnEditar, new Point(0, btnEditar.Height));
+        }
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            using (var context = new StockBDContext()) {
+
+                var categorias = context.Categorias.ToList();
+                categorias.Insert(0, new Categoria
+                {
+                    CategoriaId = 0,
+                    Nombre = "Seleccione una categoría"
+
+                });
+
+                var marcas = context.Marcas.ToList();
+                marcas.Insert(0, new Marca
+                {
+                    Id = 0,
+                    Nombre = "Seleccione una marca"
+
+                });
+
+                var ums = context.UnidadesDeMedida.ToList();
+                ums.Insert(0, new UnidadMedida
+                {
+                    Id = 0,
+                    Nombre = "Seleccione una unidad de medida"
+                });
+
+                var eliminarCategoria = new Eliminar("Categoría",categorias, entidad =>
+                {
+                    using (var context = new StockBDContext())
+                    {
+                        var categoria = (Categoria)entidad;
+                        context.Categorias.Remove(categoria);
+                        context.SaveChanges();
+                    }
+                });
+
+                var eliminarMarca = new Eliminar("Marca", marcas, entidad =>
+                {
+                    using (var context = new StockBDContext())
+                    {
+                        var marca = (Marca)entidad;
+                        context.Marcas.Remove(marca);
+                        context.SaveChanges();
+                    }
+                });
+
+                var eliminarUM = new Eliminar("Unidad de medida", ums, entidad =>
+                {
+                    using (var context = new StockBDContext())
+                    {
+                        var um = (UnidadMedida)entidad;
+                        context.UnidadesDeMedida.Remove(um);
+                        context.SaveChanges();
+                    }
+                });
+
+                var eliminarArticulo = new EliminarSeleccionar(TipoDeDatos.Articulos, TipoMovimiento.Ingreso);
+                var editarSubcategoria = new EditarSubcategoria();
+                ContextMenuStrip menu = new ContextMenuStrip();
+                menu.Font = new Font(menu.Font.FontFamily, 11);
+                menu.Items.Add("Artículos", null, (s, ev) => { eliminarArticulo.ShowDialog(); consultar(""); });
+                menu.Items.Add("Categorías", null, (s, ev) => { eliminarCategoria.ShowDialog(); consultar(""); });
+                menu.Items.Add("Marcas", null, (s, ev) => { eliminarMarca.ShowDialog(); consultar(""); });
+                menu.Items.Add("Subcategorías", null, (s, ev) => { editarSubcategoria.ShowDialog(); consultar(""); });
+                menu.Items.Add("Unidades de medida", null, (s, ev) => { eliminarUM.ShowDialog(); consultar(""); });
+
+                menu.Show(btnEliminar, new Point(0, btnEliminar.Height));
+            }
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -240,5 +320,6 @@ namespace GestionDeStock.Controles
             comboBoxSubcategoria.SelectedIndex = 0;
             consultar("");
         }
+
     }
 }

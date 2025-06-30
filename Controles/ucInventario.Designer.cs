@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             grilla = new DataGridView();
             btnAgregarArt = new Button();
             textBoxBusqueda = new TextBox();
@@ -38,6 +39,7 @@
             comboBoxCategoria = new ComboBox();
             comboBoxSubcategoria = new ComboBox();
             btnLimpiar = new Button();
+            btnEliminar = new Button();
             ((System.ComponentModel.ISupportInitialize)grilla).BeginInit();
             SuspendLayout();
             // 
@@ -49,27 +51,29 @@
             grilla.AllowUserToResizeRows = false;
             grilla.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             grilla.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = SystemColors.ActiveCaption;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            grilla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = SystemColors.ActiveCaption;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            grilla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             grilla.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             grilla.Location = new Point(0, 47);
             grilla.Name = "grilla";
             grilla.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            grilla.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            grilla.Size = new Size(1259, 557);
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = SystemColors.Control;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            grilla.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            grilla.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            grilla.Size = new Size(1302, 557);
             grilla.TabIndex = 0;
             // 
             // btnAgregarArt
@@ -77,7 +81,7 @@
             btnAgregarArt.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAgregarArt.Location = new Point(0, 0);
             btnAgregarArt.Name = "btnAgregarArt";
-            btnAgregarArt.Size = new Size(165, 41);
+            btnAgregarArt.Size = new Size(153, 41);
             btnAgregarArt.TabIndex = 1;
             btnAgregarArt.Text = "Agregar artículo";
             btnAgregarArt.UseVisualStyleBackColor = true;
@@ -87,7 +91,7 @@
             // 
             textBoxBusqueda.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBoxBusqueda.ForeColor = Color.Gray;
-            textBoxBusqueda.Location = new Point(944, 7);
+            textBoxBusqueda.Location = new Point(1060, 7);
             textBoxBusqueda.Name = "textBoxBusqueda";
             textBoxBusqueda.Size = new Size(267, 27);
             textBoxBusqueda.TabIndex = 2;
@@ -99,9 +103,9 @@
             // btnEditar
             // 
             btnEditar.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnEditar.Location = new Point(171, 0);
+            btnEditar.Location = new Point(159, -1);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(165, 41);
+            btnEditar.Size = new Size(153, 41);
             btnEditar.TabIndex = 3;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
@@ -111,7 +115,7 @@
             // 
             labelFiltros.AutoSize = true;
             labelFiltros.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelFiltros.Location = new Point(361, 10);
+            labelFiltros.Location = new Point(477, 10);
             labelFiltros.Name = "labelFiltros";
             labelFiltros.Size = new Size(52, 20);
             labelFiltros.TabIndex = 4;
@@ -122,7 +126,7 @@
             comboBoxCategoria.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxCategoria.Font = new Font("Segoe UI", 11.25F);
             comboBoxCategoria.FormattingEnabled = true;
-            comboBoxCategoria.Location = new Point(419, 8);
+            comboBoxCategoria.Location = new Point(535, 8);
             comboBoxCategoria.Name = "comboBoxCategoria";
             comboBoxCategoria.Size = new Size(252, 28);
             comboBoxCategoria.TabIndex = 5;
@@ -132,7 +136,7 @@
             comboBoxSubcategoria.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxSubcategoria.Font = new Font("Segoe UI", 11.25F);
             comboBoxSubcategoria.FormattingEnabled = true;
-            comboBoxSubcategoria.Location = new Point(677, 8);
+            comboBoxSubcategoria.Location = new Point(793, 8);
             comboBoxSubcategoria.Name = "comboBoxSubcategoria";
             comboBoxSubcategoria.Size = new Size(252, 28);
             comboBoxSubcategoria.TabIndex = 6;
@@ -140,7 +144,7 @@
             // btnLimpiar
             // 
             btnLimpiar.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnLimpiar.Location = new Point(1217, 6);
+            btnLimpiar.Location = new Point(1333, 6);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(76, 29);
             btnLimpiar.TabIndex = 7;
@@ -148,10 +152,22 @@
             btnLimpiar.UseVisualStyleBackColor = true;
             btnLimpiar.Click += btnLimpiar_Click;
             // 
+            // btnEliminar
+            // 
+            btnEliminar.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnEliminar.Location = new Point(318, -1);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(153, 41);
+            btnEliminar.TabIndex = 8;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
+            // 
             // ucInventario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(btnEliminar);
             Controls.Add(btnLimpiar);
             Controls.Add(comboBoxSubcategoria);
             Controls.Add(comboBoxCategoria);
@@ -161,7 +177,7 @@
             Controls.Add(btnAgregarArt);
             Controls.Add(grilla);
             Name = "ucInventario";
-            Size = new Size(1259, 604);
+            Size = new Size(1302, 604);
             ((System.ComponentModel.ISupportInitialize)grilla).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -177,5 +193,6 @@
         private ComboBox comboBoxCategoria;
         private ComboBox comboBoxSubcategoria;
         private Button btnLimpiar;
+        private Button btnEliminar;
     }
 }

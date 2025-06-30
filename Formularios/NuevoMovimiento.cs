@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static GestionDeStock.Formularios.SeleccionarRegistro;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace GestionDeStock.Formularios
@@ -118,9 +119,9 @@ namespace GestionDeStock.Formularios
                 comboBoxProveedor.ValueMember = "Id";
                 comboBoxProveedor.DisplayMember = "Nombre";
 
-                comboBoxDestino.DataSource = depositos;
-                comboBoxDestino.ValueMember = "Id";
-                comboBoxDestino.DisplayMember = "Nombre";
+                comboBoxDeposito.DataSource = depositos;
+                comboBoxDeposito.ValueMember = "Id";
+                comboBoxDeposito.DisplayMember = "Nombre";
 
                 comboBoxTransportista.DataSource = transportistas;
                 comboBoxTransportista.ValueMember = "Id";
@@ -136,36 +137,41 @@ namespace GestionDeStock.Formularios
 
         private void btnElegirArticulo_Click(object sender, EventArgs e)
         {
-            tabla.Rows.Clear();
-
-            var popup = new SeleccionarArticulo();
+            var popup = new SeleccionarRegistro(TipoDeDatos.Articulos, tipoMovimiento);
             var resultados = popup.ShowDialog();
 
             if (resultados == DialogResult.OK)
             {
+                tabla.Rows.Clear();
                 using (var context = new StockBDContext())
                 {
-                    var articuloSeleccionado = context.Articulos
-                        .Include(a => a.Marca)
-                        .Include(a => a.UnidadMedida)
-                        .Include(a => a.Subcategoria)
-                            .ThenInclude(s => s.Categoria)
-                        .Where(a => a.Id == popup.ArticuloSeleccionadoId).ToList();
+                    var aSelected = context.Articulos
+                        .Select(a => new
+                        {
+                            CategoriaNombre = a.Subcategoria.Categoria.Nombre,
+                            SubcategoriaNombre = a.Subcategoria.Nombre,
+                            a.CodigoArticulo,
+                            a.Descripcion,
+                            a.MN,
+                            MarcaNombre = a.Marca.Nombre,
+                            UMNombre = a.UnidadMedida.Nombre,
+                            a.Modelo,
+                            a.Stock,
+                            a.Id
+                        })
+                        .FirstOrDefault(a => a.Id == popup.idSeleccionado);
 
-                    foreach (Articulo a in articuloSeleccionado)
-                    {
-                        tabla.Rows.Add(
-                        a.Subcategoria.Categoria.Nombre,
-                        a.Subcategoria.Nombre,
-                        a.CodigoArticulo,
-                        a.Descripcion,
-                        a.MN,
-                        a.Marca?.Nombre,
-                        a.Modelo,
-                        a.UnidadMedida?.Nombre,
-                        a.Stock,
-                        a.Id);
-                    }
+                    tabla.Rows.Add(
+                    aSelected.CategoriaNombre,
+                    aSelected.SubcategoriaNombre,
+                    aSelected.CodigoArticulo,
+                    aSelected.Descripcion,
+                    aSelected?.MN,
+                    aSelected?.MarcaNombre,
+                    aSelected?.Modelo,
+                    aSelected?.UMNombre,
+                    aSelected.Stock,
+                    aSelected.Id);
                 }
                 grilla.AllowUserToAddRows = false;
             }
@@ -185,20 +191,20 @@ namespace GestionDeStock.Formularios
             {
                 using (var context = new StockBDContext())
                 {
-                    var depositos = context.Proveedores.ToList();
+                    var depositos = context.Depositos.ToList();
 
-                    depositos.Insert(0, new Proveedor
+                    depositos.Insert(0, new Deposito
                     {
                         Id = 0,
                         Nombre = "Selecciona un depósito"
 
                     });
-                    comboBoxDestino.DataSource = depositos;
-                    comboBoxDestino.ValueMember = "Id";
-                    comboBoxDestino.DisplayMember = "Nombre";
+                    comboBoxDeposito.DataSource = depositos;
+                    comboBoxDeposito.ValueMember = "Id";
+                    comboBoxDeposito.DisplayMember = "Nombre";
 
                     Deposito nuevo = popup.DepositoCreado;
-                    comboBoxDestino.SelectedIndex = nuevo.Id;
+                    comboBoxDeposito.SelectedValue = nuevo.Id;
                 }
             }
         }
@@ -223,7 +229,7 @@ namespace GestionDeStock.Formularios
                     comboBoxTransportista.DataSource = transportistas;
 
                     Transportista nuevo = popup.TransportistaCreado;
-                    comboBoxTransportista.SelectedIndex = nuevo.Id;
+                    comboBoxTransportista.SelectedValue = nuevo.Id;
                 }
             }
         }
@@ -249,7 +255,7 @@ namespace GestionDeStock.Formularios
                     comboBoxProveedor.DisplayMember = "Nombre";
 
                     Proveedor nuevo = popup.ProveedorCreado;
-                    comboBoxProveedor.SelectedIndex = nuevo.Id;
+                    comboBoxProveedor.SelectedValue = nuevo.Id;
                 }
             }
         }
@@ -275,7 +281,7 @@ namespace GestionDeStock.Formularios
                     Notas = textBoxNotas.Text,
                     ProveedorId = (int)comboBoxProveedor.SelectedIndex == 0 ? null : (int)comboBoxProveedor.SelectedValue,
                     TransportistaId = (int)comboBoxTransportista.SelectedIndex == 0 ? null : (int)comboBoxTransportista.SelectedValue,
-                    DepositoId = (int)comboBoxDestino.SelectedIndex == 0 ? null : (int)comboBoxDestino.SelectedValue,
+                    DepositoId = (int)comboBoxDeposito.SelectedIndex == 0 ? null : (int)comboBoxDeposito.SelectedValue,
                     ArticuloId = articuloSeleccionadoId,
                     Tipo = tipoMovimiento
                 };
@@ -284,10 +290,18 @@ namespace GestionDeStock.Formularios
                 {
                     using (var context = new StockBDContext())
                     {
-                        context.Movimientos.Add(nuevoIngreso);
                         var articulo = context.Articulos.FirstOrDefault(a => a.Id == articuloSeleccionadoId);
-                        articulo.Stock = articulo.Stock - cantidad;
-                        context.SaveChanges();
+                        if (articulo.Stock < cantidad)
+                        {
+                            MessageBox.Show("La cantidad de stock que quiere salir es mayor a la cantidad de stock existente del articulo.", "Stock insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else
+                        {
+                            articulo.Stock = articulo.Stock - cantidad;
+                            context.Movimientos.Add(nuevoIngreso);
+                            context.SaveChanges();
+                            this.Close();
+                        }
                     }
                 }
                 else
@@ -298,11 +312,10 @@ namespace GestionDeStock.Formularios
                         var articulo = context.Articulos.FirstOrDefault(a => a.Id == articuloSeleccionadoId);
                         articulo.Stock = articulo.Stock + cantidad;
                         context.SaveChanges();
+                        this.Close();
                     }
                 }
-                    this.Close();
             }
         }
-
     }
 }

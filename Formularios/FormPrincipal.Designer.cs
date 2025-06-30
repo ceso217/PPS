@@ -31,7 +31,7 @@
             panel = new Panel();
             btnInventario = new Button();
             panel1 = new Panel();
-            button4 = new Button();
+            btnMovimientos = new Button();
             btnSalida = new Button();
             btnIngreso = new Button();
             panel1.SuspendLayout();
@@ -42,7 +42,7 @@
             panel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel.Location = new Point(147, 3);
             panel.Name = "panel";
-            panel.Size = new Size(1049, 565);
+            panel.Size = new Size(1525, 565);
             panel.TabIndex = 0;
             // 
             // btnInventario
@@ -60,7 +60,7 @@
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            panel1.Controls.Add(button4);
+            panel1.Controls.Add(btnMovimientos);
             panel1.Controls.Add(btnSalida);
             panel1.Controls.Add(btnIngreso);
             panel1.Controls.Add(btnInventario);
@@ -69,16 +69,17 @@
             panel1.Size = new Size(129, 568);
             panel1.TabIndex = 1;
             // 
-            // button4
+            // btnMovimientos
             // 
-            button4.FlatStyle = FlatStyle.System;
-            button4.Font = new Font("Segoe UI", 11.25F);
-            button4.Location = new Point(3, 144);
-            button4.Name = "button4";
-            button4.Size = new Size(123, 41);
-            button4.TabIndex = 4;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = true;
+            btnMovimientos.FlatStyle = FlatStyle.System;
+            btnMovimientos.Font = new Font("Segoe UI", 11.25F);
+            btnMovimientos.Location = new Point(3, 144);
+            btnMovimientos.Name = "btnMovimientos";
+            btnMovimientos.Size = new Size(123, 41);
+            btnMovimientos.TabIndex = 4;
+            btnMovimientos.Text = "Movimientos";
+            btnMovimientos.UseVisualStyleBackColor = true;
+            btnMovimientos.Click += btnMovimientos_Click;
             // 
             // btnSalida
             // 
@@ -108,10 +109,12 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1208, 580);
+            ClientSize = new Size(1684, 580);
             Controls.Add(panel1);
             Controls.Add(panel);
+            MinimumSize = new Size(1700, 500);
             Name = "FormPrincipal";
+            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Gestión de Stock";
             WindowState = FormWindowState.Maximized;
@@ -124,7 +127,7 @@
         private Panel panel;
         private Button btnInventario;
         private Panel panel1;
-        private Button button4;
+        private Button btnMovimientos;
         private Button btnSalida;
         private Button btnIngreso;
     }

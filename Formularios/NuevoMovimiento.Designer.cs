@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            btnElegirArticulo = new Button();
             label2 = new Label();
+            btnElegirArticulo = new Button();
             grilla = new DataGridView();
             btnCancelar = new Button();
             label3 = new Label();
             numericUpDownCantidad = new NumericUpDown();
             label4 = new Label();
-            comboBoxDestino = new ComboBox();
-            btnNuevoDestino = new Button();
+            comboBoxDeposito = new ComboBox();
+            btnNuevoDeposito = new Button();
             btnNuevoTransp = new Button();
             comboBoxTransportista = new ComboBox();
             label5 = new Label();
@@ -74,16 +74,6 @@
             btnElegirArticulo.UseVisualStyleBackColor = true;
             btnElegirArticulo.Click += btnElegirArticulo_Click;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(52, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(61, 20);
-            label2.TabIndex = 4;
-            label2.Text = "Artículo";
-            // 
             // grilla
             // 
             grilla.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -93,6 +83,16 @@
             grilla.RowHeadersWidth = 51;
             grilla.Size = new Size(975, 43);
             grilla.TabIndex = 5;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(52, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(61, 20);
+            label2.TabIndex = 4;
+            label2.Text = "Artículo";
             // 
             // btnCancelar
             // 
@@ -134,26 +134,26 @@
             label4.TabIndex = 9;
             label4.Text = "Depósito";
             // 
-            // comboBoxDestino
+            // comboBoxDeposito
             // 
-            comboBoxDestino.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxDestino.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBoxDestino.FormattingEnabled = true;
-            comboBoxDestino.Location = new Point(171, 259);
-            comboBoxDestino.Name = "comboBoxDestino";
-            comboBoxDestino.Size = new Size(304, 28);
-            comboBoxDestino.TabIndex = 10;
+            comboBoxDeposito.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxDeposito.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBoxDeposito.FormattingEnabled = true;
+            comboBoxDeposito.Location = new Point(171, 259);
+            comboBoxDeposito.Name = "comboBoxDeposito";
+            comboBoxDeposito.Size = new Size(304, 28);
+            comboBoxDeposito.TabIndex = 10;
             // 
             // btnNuevoDestino
             // 
-            btnNuevoDestino.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnNuevoDestino.Location = new Point(531, 255);
-            btnNuevoDestino.Name = "btnNuevoDestino";
-            btnNuevoDestino.Size = new Size(231, 35);
-            btnNuevoDestino.TabIndex = 11;
-            btnNuevoDestino.Text = "Nuevo depósito";
-            btnNuevoDestino.UseVisualStyleBackColor = true;
-            btnNuevoDestino.Click += btnNuevoDestino_Click;
+            btnNuevoDeposito.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnNuevoDeposito.Location = new Point(531, 255);
+            btnNuevoDeposito.Name = "btnNuevoDestino";
+            btnNuevoDeposito.Size = new Size(231, 35);
+            btnNuevoDeposito.TabIndex = 11;
+            btnNuevoDeposito.Text = "Nuevo depósito";
+            btnNuevoDeposito.UseVisualStyleBackColor = true;
+            btnNuevoDeposito.Click += btnNuevoDestino_Click;
             // 
             // btnNuevoTransp
             // 
@@ -269,11 +269,11 @@
             comboBoxProveedor.Size = new Size(304, 28);
             comboBoxProveedor.TabIndex = 18;
             // 
-            // FormNuevoIngreso
+            // NuevoMovimiento
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1226, 649);
+            ClientSize = new Size(1217, 620);
             Controls.Add(btnNuevoProveedor);
             Controls.Add(comboBoxProveedor);
             Controls.Add(btnAgregar);
@@ -281,15 +281,18 @@
             Controls.Add(tableLayoutPanel1);
             Controls.Add(btnNuevoTransp);
             Controls.Add(comboBoxTransportista);
-            Controls.Add(btnNuevoDestino);
-            Controls.Add(comboBoxDestino);
+            Controls.Add(btnNuevoDeposito);
+            Controls.Add(comboBoxDeposito);
             Controls.Add(numericUpDownCantidad);
             Controls.Add(btnCancelar);
             Controls.Add(grilla);
             Controls.Add(btnElegirArticulo);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Margin = new Padding(3, 2, 3, 2);
-            Name = "FormNuevoIngreso";
+            MaximizeBox = false;
+            Name = "NuevoMovimiento";
+            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Nuevo Ingreso";
             ((System.ComponentModel.ISupportInitialize)grilla).EndInit();
@@ -303,15 +306,15 @@
         #endregion
 
         private Label label1;
-        private Button btnElegirArticulo;
         private Label label2;
+        private Button btnElegirArticulo;
         private DataGridView grilla;
         private Button btnCancelar;
         private Label label3;
         private NumericUpDown numericUpDownCantidad;
         private Label label4;
-        private ComboBox comboBoxDestino;
-        private Button btnNuevoDestino;
+        private ComboBox comboBoxDeposito;
+        private Button btnNuevoDeposito;
         private Button btnNuevoTransp;
         private ComboBox comboBoxTransportista;
         private Label label5;

@@ -457,6 +457,14 @@ C:\Users\baron\Desktop\PPS\PPS\obj\Debug\net8.0-windows\GestionDeStock.Formulari
 C:\Users\baron\Desktop\PPS\PPS\obj\Debug\net8.0-windows\GestionDeStock.Formularios.NuevoMovimiento.resources
 C:\Users\baron\Desktop\PPS\PPS\obj\Debug\net8.0-windows\GestionDeStock.Formularios.NuevoProveedor.resources
 C:\Users\baron\Desktop\PPS\PPS\obj\Debug\net8.0-windows\GestionDeStock.Formularios.NuevoTransportista.resources
-C:\Users\baron\Desktop\PPS\PPS\obj\Debug\net8.0-windows\GestionDeStock.Formularios.SeleccionarArticulo.resources
 C:\Users\baron\Desktop\PPS\PPS\obj\Debug\net8.0-windows\GestionDeStock.Formularios.EditarUM.resources
 C:\Users\baron\Desktop\PPS\PPS\obj\Debug\net8.0-windows\GestionDeStock.Formularios.EditarSubcategoria.resources
+C:\Users\baron\Desktop\PPS\PPS\obj\Debug\net8.0-windows\GestionDeStock.Controles.ucMovimientos.resources
+C:\Users\baron\Desktop\PPS\PPS\obj\Debug\net8.0-windows\GestionDeStock.Formularios.EditarDeposito.resources
+C:\Users\baron\Desktop\PPS\PPS\obj\Debug\net8.0-windows\GestionDeStock.Formularios.EditarProveedor.resources
+C:\Users\baron\Desktop\PPS\PPS\obj\Debug\net8.0-windows\GestionDeStock.Formularios.EditarTransp.resources
+C:\Users\baron\Desktop\PPS\PPS\obj\Debug\net8.0-windows\GestionDeStock.Formularios.EditarMovimiento.resources
+C:\Users\baron\Desktop\PPS\PPS\obj\Debug\net8.0-windows\GestionDeStock.Formularios.EditarArticulo.resources
+C:\Users\baron\Desktop\PPS\PPS\obj\Debug\net8.0-windows\GestionDeStock.Formularios.Eliminar.resources
+C:\Users\baron\Desktop\PPS\PPS\obj\Debug\net8.0-windows\GestionDeStock.Formularios.EliminarSeleccionar.resources
+C:\Users\baron\Desktop\PPS\PPS\obj\Debug\net8.0-windows\GestionDeStock.Formularios.SeleccionarRegistro.resources

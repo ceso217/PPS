@@ -247,7 +247,8 @@ namespace GestionDeStock.Migrations
                 {
                     b.HasOne("GestionDeStock.Models.Marca", "Marca")
                         .WithMany("Articulos")
-                        .HasForeignKey("MarcaId");
+                        .HasForeignKey("MarcaId")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.HasOne("GestionDeStock.Models.Subcategoria", "Subcategoria")
                         .WithMany("Articulos")
@@ -257,7 +258,8 @@ namespace GestionDeStock.Migrations
 
                     b.HasOne("GestionDeStock.Models.UnidadMedida", "UnidadMedida")
                         .WithMany("Articulos")
-                        .HasForeignKey("UnidadMedidaId");
+                        .HasForeignKey("UnidadMedidaId")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("Marca");
 
@@ -276,15 +278,18 @@ namespace GestionDeStock.Migrations
 
                     b.HasOne("GestionDeStock.Models.Deposito", "Deposito")
                         .WithMany("Movimientos")
-                        .HasForeignKey("DepositoId");
+                        .HasForeignKey("DepositoId")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.HasOne("GestionDeStock.Models.Proveedor", "Proveedor")
                         .WithMany("Movimientos")
-                        .HasForeignKey("ProveedorId");
+                        .HasForeignKey("ProveedorId")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.HasOne("GestionDeStock.Models.Transportista", "Transportista")
                         .WithMany("Movimientos")
-                        .HasForeignKey("TransportistaId");
+                        .HasForeignKey("TransportistaId")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("Articulo");
 

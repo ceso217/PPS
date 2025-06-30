@@ -29,7 +29,7 @@ namespace GestionDeStock.Formularios
                 categorias.Insert(0, new Categoria
                 {
                     CategoriaId = 0,
-                    Nombre = "Seleccione una categoría"
+                    Nombre = "Seleccione una depósito"
                 });
 
                 comboBoxCategoria.DataSource = categorias;
@@ -39,7 +39,7 @@ namespace GestionDeStock.Formularios
             comboBoxCategoria.SelectedIndexChanged += (s, e) =>
             {
                 var categoriaSeleccionada = comboBoxCategoria.SelectedItem as Categoria;
-                if (categoriaSeleccionada.Nombre == "Seleccione una categoría")
+                if (categoriaSeleccionada.Nombre == "Seleccione una depósito")
                 {
                     textBox1.Text = "";
                 }
@@ -60,7 +60,7 @@ namespace GestionDeStock.Formularios
             var categoriaSeleccionada = comboBoxCategoria.SelectedItem as Categoria;
             if(comboBoxCategoria.SelectedIndex == 0)
             {
-                MessageBox.Show("Categoría no seleccionada.", "Campo incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Depósito no seleccionado.", "Campo incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }else if (string.IsNullOrEmpty(textBox1.Text)){
                 MessageBox.Show("El campo \"Nuevo nombre\" esta vacío.","Campo incompleto",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             } else if (textBox1.Text == categoriaSeleccionada.Nombre){
