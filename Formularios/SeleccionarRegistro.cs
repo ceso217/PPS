@@ -196,9 +196,9 @@ namespace GestionDeStock.Formularios
                 }
                 else
                 {
-                    comboBoxDeposito.Location = new Point(548, 7);
-                    textBoxBusqueda.Location = new Point(762, 7);
-                    btnLimpiar.Location = new Point(1035, 6);
+                    //comboBoxDeposito.Location = new Point(548, 7);
+                    //textBoxBusqueda.Location = new Point(762, 7);
+                    //btnLimpiar.Location = new Point(1035, 6);
 
                     var tipoMovimiento = tipo == TipoMovimiento.Ingreso ? TipoMovimiento.Ingreso : TipoMovimiento.Salida;
 

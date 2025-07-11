@@ -24,6 +24,7 @@ namespace GestionDeStock.Formularios
         {
             InitializeComponent();
             tipoD = tipoDeDatos;
+            tipoM = tipoMovimiento;
             Iniciar();
 
             if (tipoDeDatos == TipoDeDatos.Articulos)
@@ -198,36 +199,23 @@ namespace GestionDeStock.Formularios
                 }
                 else
                 {
-                    //if(tipoM == TipoMovimiento.Ingreso)
-                    //{
-                    //    var articulo = context.Movimientos.FirstOrDefault(a => a.Id == mSeleccionado.ArticuloId);
-
-                    //        var nuevoArticulo = context.Articulos.FirstOrDefault(m => m.Id == (int)grilla.Rows[0].Cells["ArticuloId"].Value);
-
-                    //        articuloEditado.Stock -= cantidadAnterior;
-                    //        nuevoArticulo.Stock += nuevaCantidad;
-                    //    else
-                    //    {
-                    //        articuloEditado.Stock = articuloEditado.Stock - cantidadAnterior + nuevaCantidad;
-                    //    }
-                    //    if (comboBoxProveedor.SelectedIndex != 0)
-                    //    {
-                    //        movimiento.ProveedorId = (int)comboBoxProveedor.SelectedValue;
-                    //    }
-                    //    if (comboBoxDeposito.SelectedIndex != 0)
-                    //    {
-                    //        movimiento.DepositoId = (int)comboBoxDeposito.SelectedValue;
-                    //    }
-                    //    if (comboBoxTransportista.SelectedIndex != 0)
-                    //    {
-                    //        movimiento.TransportistaId = (int)comboBoxTransportista.SelectedValue;
-                    //    }
-                    //    movimiento.Notas = textBoxNotas.Text;
-                    //    movimiento.Cantidad = nuevaCantidad;
-                    //    context.SaveChanges();
-                    //    this.Close();
-                    //}
-                    //context.Movimientos.Remove(mSeleccionado);
+                    var articulo = context.Articulos.FirstOrDefault(a => a.Id == mSeleccionado.ArticuloId);
+                    if (tipoM == TipoMovimiento.Ingreso)
+                    {
+                        if (articulo.Stock < mSeleccionado.Cantidad)
+                        {
+                            MessageBox.Show("No es posible eliminar este ingreso porque el artículo asociado quedaría con un stock negativo, ya que existe una salida registrada que depende de este ingreso.", "Acción inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+                        else
+                        {
+                            articulo.Stock -= mSeleccionado.Cantidad;
+                        }
+                    } else
+                    {
+                        articulo.Stock += mSeleccionado.Cantidad;
+                    }
+                    context.Movimientos.Remove(mSeleccionado);
                 }
                 context.SaveChanges();
                 this.Close();
