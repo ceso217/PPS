@@ -1,12 +1,54 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|c:\\users\\baron\\desktop\\pps\\pps\\formularios\\nuevoart\u00EDculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:formularios\\nuevoart\u00EDculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|c:\\users\\baron\\desktop\\pps\\pps\\formularios\\editarmovimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E390D0F-0C2C-4BA0-A1EA-D1B9D94AF075}|GestionDeStock.csproj|solutionrelative:formularios\\editarmovimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EditarMovimiento.cs",
+              "DocumentMoniker": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\EditarMovimiento.cs",
+              "RelativeDocumentMoniker": "Formularios\\EditarMovimiento.cs",
+              "ToolTip": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\EditarMovimiento.cs",
+              "RelativeToolTip": "Formularios\\EditarMovimiento.cs",
+              "ViewState": "AQIAANAAAAAAAAAAAAAkwAkAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T14:43:27.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NuevoArt\u00EDculo.cs",
+              "DocumentMoniker": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\NuevoArt\u00EDculo.cs",
+              "RelativeDocumentMoniker": "Formularios\\NuevoArt\u00EDculo.cs",
+              "ToolTip": "C:\\Users\\baron\\Desktop\\PPS\\PPS\\Formularios\\NuevoArt\u00EDculo.cs",
+              "RelativeToolTip": "Formularios\\NuevoArt\u00EDculo.cs",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAYwH4AAACIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T14:30:24.932Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

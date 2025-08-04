@@ -122,6 +122,12 @@ namespace GestionDeStock
                     {
                         using (var context = new StockBDContext())
                         {
+                            var articuloExistente = context.Articulos.FirstOrDefault(a => a.Descripcion.ToLower() == textBoxDescription.Text.ToLower());
+                            if (articuloExistente != null) {
+                                MessageBox.Show("Ya existe un artículo existente con la descripción \"" + textBoxDescription.Text + "\"." , "Artículo existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
+
                             var subcategoriaSeleccionada = comboBoxSubcategoria.SelectedItem as Subcategoria;
 
                             var articulos = context.Articulos.Where(a => a.CategoriaId == (int)comboBoxCategoria.SelectedValue && a.SubcategoriaId == subcategoriaSeleccionada.Id).OrderBy(a => a.CodigoArticulo).ToList();
